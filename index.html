@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="app-container">
         <!-- Top Blank Header Bar -->
         <header class="app-header"></header>
-        
+
         <div class="app-layout">
             <!-- Left Sidebar Menu -->
             <aside class="app-sidebar">
@@ -23,340 +25,341 @@
                     <a href="loan_info.html" class="nav-item" id="navPage2">Page 2</a>
                 </nav>
             </aside>
-            
+
             <!-- Main Content Area -->
             <main class="app-main">
                 <div class="participation-container">
-            <!-- Modal Header -->
-            <header class="modal-header">
-                <h1 class="modal-title">Participation Info</h1>
-            </header>
+                    <!-- Modal Header -->
+                    <header class="modal-header">
+                        <h1 class="modal-title">Participation Info</h1>
+                    </header>
 
-            <!-- Modal Content -->
-            <main class="modal-content">
-                <!-- Borrower Info Card (Supports Multiple Rates) -->
-                <section class="borrower-card">
-                    <div class="borrower-main-info">
-                        <h2 class="section-subtitle">Borrower Info</h2>
-                        <div class="company-name">sample company name</div>
-                    </div>
-                    
-                    <div class="borrower-rates-group">
-                        <!-- Active Rate Row 1 -->
-                        <div class="borrower-rates-row">
-                            <div class="borrower-rates-container">
-                                <div class="rate-column">
-                                    <span class="rate-label">Base Rate</span>
-                                    <span class="rate-value rate-blue">7.75%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">Bank Cost</span>
-                                    <span class="rate-value rate-green">0.21%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">Spread Rate</span>
-                                    <span class="rate-value rate-red">4%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">All in Rate</span>
-                                    <span class="rate-value rate-amber">11.96%</span>
-                                </div>
-                                <div class="rate-column rate-action-column">
-                                    <a href="#" class="view-history-link">View History</a>
-                                </div>
+                    <!-- Modal Content -->
+                    <main class="modal-content">
+                        <!-- Borrower Info Card (Supports Multiple Rates) -->
+                        <section class="borrower-card">
+                            <div class="borrower-main-info">
+                                <h2 class="section-subtitle">Borrower Info</h2>
+                                <div class="company-name">sample company name</div>
                             </div>
-                        </div>
 
-                        <!-- Active Rate Row 2 -->
-                        <div class="borrower-rates-row">
-                            <div class="borrower-rates-container">
-                                <div class="rate-column">
-                                    <span class="rate-label">Base Rate</span>
-                                    <span class="rate-value rate-blue">8.25%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">Bank Cost</span>
-                                    <span class="rate-value rate-green">0.35%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">Spread Rate</span>
-                                    <span class="rate-value rate-red">3.5%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">All in Rate</span>
-                                    <span class="rate-value rate-amber">12.10%</span>
-                                </div>
-                                <div class="rate-column rate-action-column">
-                                    <a href="#" class="view-history-link">View History</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Active Rate Row 3 -->
-                        <div class="borrower-rates-row">
-                            <div class="borrower-rates-container">
-                                <div class="rate-column">
-                                    <span class="rate-label">Base Rate</span>
-                                    <span class="rate-value rate-blue">7.50%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">Bank Cost</span>
-                                    <span class="rate-value rate-green">0.15%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">Spread Rate</span>
-                                    <span class="rate-value rate-red">4.2%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">All in Rate</span>
-                                    <span class="rate-value rate-amber">11.85%</span>
-                                </div>
-                                <div class="rate-column rate-action-column">
-                                    <a href="#" class="view-history-link">View History</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Active Rate Row 4 -->
-                        <div class="borrower-rates-row">
-                            <div class="borrower-rates-container">
-                                <div class="rate-column">
-                                    <span class="rate-label">Base Rate</span>
-                                    <span class="rate-value rate-blue">8.00%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">Bank Cost</span>
-                                    <span class="rate-value rate-green">0.30%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">Spread Rate</span>
-                                    <span class="rate-value rate-red">3.8%</span>
-                                </div>
-                                <div class="rate-column">
-                                    <span class="rate-label">All in Rate</span>
-                                    <span class="rate-value rate-amber">12.10%</span>
-                                </div>
-                                <div class="rate-column rate-action-column">
-                                    <a href="#" class="view-history-link">View History</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Lenders Info Section -->
-                <section class="lenders-section">
-                    <div class="lenders-header">
-                        <h2 class="section-subtitle">Lenders Info</h2>
-                        <div class="search-container">
-                            <input type="text" class="search-input" placeholder="Find">
-                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- Lenders Table -->
-                    <div class="lenders-table">
-                        <!-- Table Header Bar -->
-                        <div class="table-header-bar">
-                            <div class="header-col col-lenders">Lenders</div>
-                            <div class="header-col col-rate-info col-rate-info-header">
-                                <span class="rate-header-item col-base-rate-sub">Base Rate</span>
-                                <span class="rate-header-item col-reserve-rate-sub">Bank Cost</span>
-                                <span class="rate-header-item col-spread-rate-sub">Spread Rate</span>
-                            </div>
-                            <div class="header-col col-all-in-rate">All in Rate</div>
-                        </div>
-
-                        <!-- Table Body -->
-                        <div class="table-body">
-                            <!-- Row 1 (Multiple Active Rates) -->
-                            <div class="table-row table-row-multiple">
-                                <div class="row-col col-lenders">
-                                    <div class="meta-item">
-                                        <span class="meta-label">Name</span>
-                                        <span class="meta-value">sample company name</span>
-                                    </div>
-                                    <div class="meta-item">
-                                        <span class="meta-label">Participation Amount</span>
-                                        <span class="meta-value currency-value">INR 5555,5555</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="lender-rates-group">
-                                    <!-- Rate Set 1 -->
-                                    <div class="lender-rates-row">
-                                        <div class="row-col col-rate-info">
-                                            <div class="meta-item col-base-rate-sub">
-                                                <span class="meta-label">Base Rate</span>
-                                                <span class="meta-value">7.75%</span>
-                                            </div>
-                                            <div class="meta-item col-reserve-rate-sub">
-                                                <span class="meta-label">Bank Cost</span>
-                                                <span class="meta-value">0.21%</span>
-                                            </div>
-                                            <div class="meta-item col-spread-rate-sub">
-                                                <span class="meta-label">Spread Rate</span>
-                                                <span class="meta-value">4%</span>
-                                            </div>
+                            <div class="borrower-rates-group">
+                                <!-- Active Rate Row 1 -->
+                                <div class="borrower-rates-row">
+                                    <div class="borrower-rates-container">
+                                        <div class="rate-column">
+                                            <span class="rate-label">Base Rate</span>
+                                            <span class="rate-value rate-blue">7.75%</span>
                                         </div>
-                                        <div class="row-col col-all-in-rate">
-                                            <span class="all-in-rate-value">11.96%</span>
+                                        <div class="rate-column">
+                                            <span class="rate-label">Stat/Bank Cost/CAS</span>
+                                            <span class="rate-value rate-green">0.21%</span>
                                         </div>
-                                        <div class="row-col col-actions">
+                                        <div class="rate-column">
+                                            <span class="rate-label">Spread Rate</span>
+                                            <span class="rate-value rate-red">4%</span>
+                                        </div>
+                                        <div class="rate-column">
+                                            <span class="rate-label">All in Rate</span>
+                                            <span class="rate-value rate-amber">11.96%</span>
+                                        </div>
+                                        <div class="rate-column rate-action-column">
                                             <a href="#" class="view-history-link">View History</a>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!-- Rate Set 2 -->
-                                    <div class="lender-rates-row">
-                                        <div class="row-col col-rate-info">
-                                            <div class="meta-item col-base-rate-sub">
-                                                <span class="meta-label">Base Rate</span>
-                                                <span class="meta-value">8.25%</span>
-                                            </div>
-                                            <div class="meta-item col-reserve-rate-sub">
-                                                <span class="meta-label">Bank Cost</span>
-                                                <span class="meta-value">0.35%</span>
-                                            </div>
-                                            <div class="meta-item col-spread-rate-sub">
-                                                <span class="meta-label">Spread Rate</span>
-                                                <span class="meta-value">3.5%</span>
-                                            </div>
+                                <!-- Active Rate Row 2 -->
+                                <div class="borrower-rates-row">
+                                    <div class="borrower-rates-container">
+                                        <div class="rate-column">
+                                            <span class="rate-label">Base Rate</span>
+                                            <span class="rate-value rate-blue">8.25%</span>
                                         </div>
-                                        <div class="row-col col-all-in-rate">
-                                            <span class="all-in-rate-value">12.10%</span>
+                                        <div class="rate-column">
+                                            <span class="rate-label">Stat/Bank Cost/CAS</span>
+                                            <span class="rate-value rate-green">0.35%</span>
                                         </div>
-                                        <div class="row-col col-actions">
+                                        <div class="rate-column">
+                                            <span class="rate-label">Spread Rate</span>
+                                            <span class="rate-value rate-red">3.5%</span>
+                                        </div>
+                                        <div class="rate-column">
+                                            <span class="rate-label">All in Rate</span>
+                                            <span class="rate-value rate-amber">12.10%</span>
+                                        </div>
+                                        <div class="rate-column rate-action-column">
                                             <a href="#" class="view-history-link">View History</a>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!-- Rate Set 3 -->
-                                    <div class="lender-rates-row">
-                                        <div class="row-col col-rate-info">
-                                            <div class="meta-item col-base-rate-sub">
-                                                <span class="meta-label">Base Rate</span>
-                                                <span class="meta-value">7.50%</span>
-                                            </div>
-                                            <div class="meta-item col-reserve-rate-sub">
-                                                <span class="meta-label">Bank Cost</span>
-                                                <span class="meta-value">0.15%</span>
-                                            </div>
-                                            <div class="meta-item col-spread-rate-sub">
-                                                <span class="meta-label">Spread Rate</span>
-                                                <span class="meta-value">4.2%</span>
-                                            </div>
+                                <!-- Active Rate Row 3 -->
+                                <div class="borrower-rates-row">
+                                    <div class="borrower-rates-container">
+                                        <div class="rate-column">
+                                            <span class="rate-label">Base Rate</span>
+                                            <span class="rate-value rate-blue">7.50%</span>
                                         </div>
-                                        <div class="row-col col-all-in-rate">
-                                            <span class="all-in-rate-value">11.85%</span>
+                                        <div class="rate-column">
+                                            <span class="rate-label">Stat/Bank Cost/CAS</span>
+                                            <span class="rate-value rate-green">0.15%</span>
                                         </div>
-                                        <div class="row-col col-actions">
+                                        <div class="rate-column">
+                                            <span class="rate-label">Spread Rate</span>
+                                            <span class="rate-value rate-red">4.2%</span>
+                                        </div>
+                                        <div class="rate-column">
+                                            <span class="rate-label">All in Rate</span>
+                                            <span class="rate-value rate-amber">11.85%</span>
+                                        </div>
+                                        <div class="rate-column rate-action-column">
                                             <a href="#" class="view-history-link">View History</a>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <!-- Rate Set 4 -->
-                                    <div class="lender-rates-row">
-                                        <div class="row-col col-rate-info">
-                                            <div class="meta-item col-base-rate-sub">
-                                                <span class="meta-label">Base Rate</span>
-                                                <span class="meta-value">8.00%</span>
-                                            </div>
-                                            <div class="meta-item col-reserve-rate-sub">
-                                                <span class="meta-label">Bank Cost</span>
-                                                <span class="meta-value">0.30%</span>
-                                            </div>
-                                            <div class="meta-item col-spread-rate-sub">
-                                                <span class="meta-label">Spread Rate</span>
-                                                <span class="meta-value">3.8%</span>
-                                            </div>
+                                <!-- Active Rate Row 4 -->
+                                <div class="borrower-rates-row">
+                                    <div class="borrower-rates-container">
+                                        <div class="rate-column">
+                                            <span class="rate-label">Base Rate</span>
+                                            <span class="rate-value rate-blue">8.00%</span>
                                         </div>
-                                        <div class="row-col col-all-in-rate">
-                                            <span class="all-in-rate-value">12.10%</span>
+                                        <div class="rate-column">
+                                            <span class="rate-label">Stat/Bank Cost/CAS</span>
+                                            <span class="rate-value rate-green">0.30%</span>
                                         </div>
-                                        <div class="row-col col-actions">
+                                        <div class="rate-column">
+                                            <span class="rate-label">Spread Rate</span>
+                                            <span class="rate-value rate-red">3.8%</span>
+                                        </div>
+                                        <div class="rate-column">
+                                            <span class="rate-label">All in Rate</span>
+                                            <span class="rate-value rate-amber">12.10%</span>
+                                        </div>
+                                        <div class="rate-column rate-action-column">
                                             <a href="#" class="view-history-link">View History</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </section>
 
-                            <!-- Row 2 (Multiple Active Rates) -->
-                            <div class="table-row table-row-multiple">
-                                <div class="row-col col-lenders">
-                                    <div class="meta-item">
-                                        <span class="meta-label">Name</span>
-                                        <span class="meta-value">sample company name</span>
-                                    </div>
-                                    <div class="meta-item">
-                                        <span class="meta-label">Participation Amount</span>
-                                        <span class="meta-value currency-value">INR 5555,5555</span>
-                                    </div>
+                        <!-- Lenders Info Section -->
+                        <section class="lenders-section">
+                            <div class="lenders-header">
+                                <h2 class="section-subtitle">Lenders Info</h2>
+                                <div class="search-container">
+                                    <input type="text" class="search-input" placeholder="Find">
+                                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                    </svg>
                                 </div>
-                                
-                                <div class="lender-rates-group">
-                                    <!-- Rate Set 1 -->
-                                    <div class="lender-rates-row">
-                                        <div class="row-col col-rate-info">
-                                            <div class="meta-item col-base-rate-sub">
-                                                <span class="meta-label">Base Rate</span>
-                                                <span class="meta-value">7.75%</span>
+                            </div>
+
+                            <!-- Lenders Table -->
+                            <div class="lenders-table">
+                                <!-- Table Header Bar -->
+                                <div class="table-header-bar">
+                                    <div class="header-col col-lenders">Lenders</div>
+                                    <div class="header-col col-rate-info col-rate-info-header">
+                                        <span class="rate-header-item col-base-rate-sub">Base Rate</span>
+                                        <span class="rate-header-item col-reserve-rate-sub">Stat/Bank Cost/CAS</span>
+                                        <span class="rate-header-item col-spread-rate-sub">Spread Rate</span>
+                                    </div>
+                                    <div class="header-col col-all-in-rate">All in Rate</div>
+                                </div>
+
+                                <!-- Table Body -->
+                                <div class="table-body">
+                                    <!-- Row 1 (Multiple Active Rates) -->
+                                    <div class="table-row table-row-multiple">
+                                        <div class="row-col col-lenders">
+                                            <div class="meta-item">
+                                                <span class="meta-label">Name</span>
+                                                <span class="meta-value">sample company name</span>
                                             </div>
-                                            <div class="meta-item col-reserve-rate-sub">
-                                                <span class="meta-label">Bank Cost</span>
-                                                <span class="meta-value">0.21%</span>
-                                            </div>
-                                            <div class="meta-item col-spread-rate-sub">
-                                                <span class="meta-label">Spread Rate</span>
-                                                <span class="meta-value">4%</span>
+                                            <div class="meta-item">
+                                                <span class="meta-label">Participation Amount</span>
+                                                <span class="meta-value currency-value">INR 5555,5555</span>
                                             </div>
                                         </div>
-                                        <div class="row-col col-all-in-rate">
-                                            <span class="all-in-rate-value">11.96%</span>
-                                        </div>
-                                        <div class="row-col col-actions">
-                                            <a href="#" class="view-history-link">View History</a>
+
+                                        <div class="lender-rates-group">
+                                            <!-- Rate Set 1 -->
+                                            <div class="lender-rates-row">
+                                                <div class="row-col col-rate-info">
+                                                    <div class="meta-item col-base-rate-sub">
+                                                        <span class="meta-label">Base Rate</span>
+                                                        <span class="meta-value">7.75%</span>
+                                                    </div>
+                                                    <div class="meta-item col-reserve-rate-sub">
+                                                        <span class="meta-label">Stat/Bank Cost/CAS</span>
+                                                        <span class="meta-value">0.21%</span>
+                                                    </div>
+                                                    <div class="meta-item col-spread-rate-sub">
+                                                        <span class="meta-label">Spread Rate</span>
+                                                        <span class="meta-value">4%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row-col col-all-in-rate">
+                                                    <span class="all-in-rate-value">11.96%</span>
+                                                </div>
+                                                <div class="row-col col-actions">
+                                                    <a href="#" class="view-history-link">View History</a>
+                                                </div>
+                                            </div>
+
+                                            <!-- Rate Set 2 -->
+                                            <div class="lender-rates-row">
+                                                <div class="row-col col-rate-info">
+                                                    <div class="meta-item col-base-rate-sub">
+                                                        <span class="meta-label">Base Rate</span>
+                                                        <span class="meta-value">8.25%</span>
+                                                    </div>
+                                                    <div class="meta-item col-reserve-rate-sub">
+                                                        <span class="meta-label">Stat/Bank Cost/CAS</span>
+                                                        <span class="meta-value">0.35%</span>
+                                                    </div>
+                                                    <div class="meta-item col-spread-rate-sub">
+                                                        <span class="meta-label">Spread Rate</span>
+                                                        <span class="meta-value">3.5%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row-col col-all-in-rate">
+                                                    <span class="all-in-rate-value">12.10%</span>
+                                                </div>
+                                                <div class="row-col col-actions">
+                                                    <a href="#" class="view-history-link">View History</a>
+                                                </div>
+                                            </div>
+
+                                            <!-- Rate Set 3 -->
+                                            <div class="lender-rates-row">
+                                                <div class="row-col col-rate-info">
+                                                    <div class="meta-item col-base-rate-sub">
+                                                        <span class="meta-label">Base Rate</span>
+                                                        <span class="meta-value">7.50%</span>
+                                                    </div>
+                                                    <div class="meta-item col-reserve-rate-sub">
+                                                        <span class="meta-label">Stat/Bank Cost/CAS</span>
+                                                        <span class="meta-value">0.15%</span>
+                                                    </div>
+                                                    <div class="meta-item col-spread-rate-sub">
+                                                        <span class="meta-label">Spread Rate</span>
+                                                        <span class="meta-value">4.2%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row-col col-all-in-rate">
+                                                    <span class="all-in-rate-value">11.85%</span>
+                                                </div>
+                                                <div class="row-col col-actions">
+                                                    <a href="#" class="view-history-link">View History</a>
+                                                </div>
+                                            </div>
+
+                                            <!-- Rate Set 4 -->
+                                            <div class="lender-rates-row">
+                                                <div class="row-col col-rate-info">
+                                                    <div class="meta-item col-base-rate-sub">
+                                                        <span class="meta-label">Base Rate</span>
+                                                        <span class="meta-value">8.00%</span>
+                                                    </div>
+                                                    <div class="meta-item col-reserve-rate-sub">
+                                                        <span class="meta-label">Stat/Bank Cost/CAS</span>
+                                                        <span class="meta-value">0.30%</span>
+                                                    </div>
+                                                    <div class="meta-item col-spread-rate-sub">
+                                                        <span class="meta-label">Spread Rate</span>
+                                                        <span class="meta-value">3.8%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row-col col-all-in-rate">
+                                                    <span class="all-in-rate-value">12.10%</span>
+                                                </div>
+                                                <div class="row-col col-actions">
+                                                    <a href="#" class="view-history-link">View History</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <!-- Rate Set 2 -->
-                                    <div class="lender-rates-row">
-                                        <div class="row-col col-rate-info">
-                                            <div class="meta-item col-base-rate-sub">
-                                                <span class="meta-label">Base Rate</span>
-                                                <span class="meta-value">8.50%</span>
+                                    <!-- Row 2 (Multiple Active Rates) -->
+                                    <div class="table-row table-row-multiple">
+                                        <div class="row-col col-lenders">
+                                            <div class="meta-item">
+                                                <span class="meta-label">Name</span>
+                                                <span class="meta-value">sample company name</span>
                                             </div>
-                                            <div class="meta-item col-reserve-rate-sub">
-                                                <span class="meta-label">Bank Cost</span>
-                                                <span class="meta-value">0.40%</span>
-                                            </div>
-                                            <div class="meta-item col-spread-rate-sub">
-                                                <span class="meta-label">Spread Rate</span>
-                                                <span class="meta-value">3.0%</span>
+                                            <div class="meta-item">
+                                                <span class="meta-label">Participation Amount</span>
+                                                <span class="meta-value currency-value">INR 5555,5555</span>
                                             </div>
                                         </div>
-                                        <div class="row-col col-all-in-rate">
-                                            <span class="all-in-rate-value">12.30%</span>
-                                        </div>
-                                        <div class="row-col col-actions">
-                                            <a href="#" class="view-history-link">View History</a>
+
+                                        <div class="lender-rates-group">
+                                            <!-- Rate Set 1 -->
+                                            <div class="lender-rates-row">
+                                                <div class="row-col col-rate-info">
+                                                    <div class="meta-item col-base-rate-sub">
+                                                        <span class="meta-label">Base Rate</span>
+                                                        <span class="meta-value">7.75%</span>
+                                                    </div>
+                                                    <div class="meta-item col-reserve-rate-sub">
+                                                        <span class="meta-label">Stat/Bank Cost/CAS</span>
+                                                        <span class="meta-value">0.21%</span>
+                                                    </div>
+                                                    <div class="meta-item col-spread-rate-sub">
+                                                        <span class="meta-label">Spread Rate</span>
+                                                        <span class="meta-value">4%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row-col col-all-in-rate">
+                                                    <span class="all-in-rate-value">11.96%</span>
+                                                </div>
+                                                <div class="row-col col-actions">
+                                                    <a href="#" class="view-history-link">View History</a>
+                                                </div>
+                                            </div>
+
+                                            <!-- Rate Set 2 -->
+                                            <div class="lender-rates-row">
+                                                <div class="row-col col-rate-info">
+                                                    <div class="meta-item col-base-rate-sub">
+                                                        <span class="meta-label">Base Rate</span>
+                                                        <span class="meta-value">8.50%</span>
+                                                    </div>
+                                                    <div class="meta-item col-reserve-rate-sub">
+                                                        <span class="meta-label">Stat/Bank Cost/CAS</span>
+                                                        <span class="meta-value">0.40%</span>
+                                                    </div>
+                                                    <div class="meta-item col-spread-rate-sub">
+                                                        <span class="meta-label">Spread Rate</span>
+                                                        <span class="meta-value">3.0%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row-col col-all-in-rate">
+                                                    <span class="all-in-rate-value">12.30%</span>
+                                                </div>
+                                                <div class="row-col col-actions">
+                                                    <a href="#" class="view-history-link">View History</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
+                        </section>
 
-                <!-- Space for main page end -->
+                        <!-- Space for main page end -->
+                    </main>
+                </div>
             </main>
         </div>
-    </main>
-</div>
-</div>
+    </div>
 
     <!-- History Popup Modal (Triggered by View History links) -->
     <div class="popup-overlay" id="historyPopup">
@@ -365,7 +368,8 @@
             <header class="popup-header">
                 <h1 class="popup-title">Participation Info</h1>
                 <button class="popup-close-btn" id="closePopupBtn" aria-label="Close popup">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
@@ -380,14 +384,14 @@
                         <h2 class="popup-subtitle" id="popupSubtitle">Borrower Info</h2>
                         <div class="popup-company-name" id="popupCompanyName">sample company name</div>
                     </div>
-                    
+
                     <div class="popup-rates-container" id="popupRatesContainer">
                         <div class="popup-rate-column">
                             <span class="popup-rate-label">Base Rate</span>
                             <span class="popup-rate-value rate-blue">7.75%</span>
                         </div>
                         <div class="popup-rate-column">
-                            <span class="popup-rate-label">Bank Cost</span>
+                            <span class="popup-rate-label">Stat/Bank Cost/CAS</span>
                             <span class="popup-rate-value rate-green">0.21%</span>
                         </div>
                         <div class="popup-rate-column">
@@ -408,7 +412,8 @@
                         <div class="popup-history-actions">
                             <!-- Download Button -->
                             <button class="popup-action-btn download-btn">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                                     <polyline points="7 10 12 15 17 10"></polyline>
                                     <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -418,7 +423,8 @@
 
                             <!-- Filter Button -->
                             <button class="popup-action-btn filter-btn" id="popupFilterBtn">
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                                 </svg>
                                 Filter
@@ -430,19 +436,21 @@
                                 <div class="popup-calendar-panel" id="popupCalendarPanel">
                                     <header class="popup-calendar-header">
                                         <button class="cal-nav-btn prev-month" aria-label="Previous months">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                                 <polyline points="15 18 9 12 15 6"></polyline>
                                             </svg>
                                         </button>
                                         <span class="popup-calendar-month-title">May 2025</span>
                                         <span class="popup-calendar-month-title">June 2025</span>
                                         <button class="cal-nav-btn next-month" aria-label="Next months">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                                 <polyline points="9 18 15 12 9 6"></polyline>
                                             </svg>
                                         </button>
                                     </header>
-                                    
+
                                     <div class="popup-calendar-grids-container">
                                         <!-- May 2025 -->
                                         <div class="popup-calendar-grid">
@@ -462,7 +470,7 @@
                                             <div class="day-number range-selected">2</div>
                                             <div class="day-number range-selected">3</div>
                                             <div class="day-number range-selected">4</div>
-                                            
+
                                             <div class="day-number range-selected">5</div>
                                             <div class="day-number range-selected">6</div>
                                             <div class="day-number range-selected">7</div>
@@ -470,7 +478,7 @@
                                             <div class="day-number range-selected">9</div>
                                             <div class="day-number range-selected">10</div>
                                             <div class="day-number range-selected">11</div>
-                                            
+
                                             <div class="day-number range-selected">12</div>
                                             <div class="day-number range-selected">13</div>
                                             <div class="day-number range-selected">14</div>
@@ -478,7 +486,7 @@
                                             <div class="day-number range-selected">16</div>
                                             <div class="day-number range-selected">17</div>
                                             <div class="day-number range-selected">18</div>
-                                            
+
                                             <div class="day-number range-selected">19</div>
                                             <div class="day-number range-selected">20</div>
                                             <div class="day-number range-selected">21</div>
@@ -486,7 +494,7 @@
                                             <div class="day-number">23</div>
                                             <div class="day-number">24</div>
                                             <div class="day-number">25</div>
-                                            
+
                                             <div class="day-number">26</div>
                                             <div class="day-number">27</div>
                                             <div class="day-number">28</div>
@@ -514,7 +522,7 @@
                                             <div class="day-number other-month">30</div>
                                             <div class="day-number other-month">31</div>
                                             <div class="day-number">1</div>
-                                            
+
                                             <div class="day-number">2</div>
                                             <div class="day-number">3</div>
                                             <div class="day-number">4</div>
@@ -522,7 +530,7 @@
                                             <div class="day-number">6</div>
                                             <div class="day-number">7</div>
                                             <div class="day-number">8</div>
-                                            
+
                                             <div class="day-number">9</div>
                                             <div class="day-number">10</div>
                                             <div class="day-number">11</div>
@@ -530,7 +538,7 @@
                                             <div class="day-number">13</div>
                                             <div class="day-number">14</div>
                                             <div class="day-number">15</div>
-                                            
+
                                             <div class="day-number">16</div>
                                             <div class="day-number">17</div>
                                             <div class="day-number">18</div>
@@ -538,7 +546,7 @@
                                             <div class="day-number">20</div>
                                             <div class="day-number">21</div>
                                             <div class="day-number">22</div>
-                                            
+
                                             <div class="day-number">23</div>
                                             <div class="day-number">24</div>
                                             <div class="day-number">25</div>
@@ -546,7 +554,7 @@
                                             <div class="day-number">27</div>
                                             <div class="day-number">28</div>
                                             <div class="day-number">29</div>
-                                            
+
                                             <div class="day-number">30</div>
                                             <div class="day-number other-month">1</div>
                                             <div class="day-number other-month">2</div>
@@ -594,7 +602,8 @@
                             <!-- Find Input -->
                             <div class="popup-search-container">
                                 <input type="text" class="popup-search-input" id="popupSearchInput" placeholder="Find">
-                                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="11" cy="11" r="8"></circle>
                                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                                 </svg>
@@ -609,9 +618,9 @@
                                 <tr>
                                     <th class="h-col-hash">#</th>
                                     <th class="h-col-date">Effective Date</th>
-                                    <th class="h-col-rate h-col-rate-index">Rate Index</th>
+                                    <th class="h-col-rate h-col-base-index">Base Index</th>
                                     <th class="h-col-rate">Base Rate</th>
-                                    <th class="h-col-rate">Bank Cost</th>
+                                    <th class="h-col-rate">Stat/Bank Cost/CAS</th>
                                     <th class="h-col-rate">Spread Rate</th>
                                     <th class="h-col-rate">All in Rate</th>
                                 </tr>
@@ -620,7 +629,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>07 May 2025</td>
-                                    <td class="col-rate-index-val">MCLR 3M</td>
+                                    <td class="col-base-index-val">JIBAR</td>
                                     <td>7.10 %</td>
                                     <td>1.10 %</td>
                                     <td>2.25 %</td>
@@ -629,7 +638,7 @@
                                 <tr>
                                     <td>2</td>
                                     <td>01 May 2025</td>
-                                    <td class="col-rate-index-val">MCLR 3M</td>
+                                    <td class="col-base-index-val">JIBAR</td>
                                     <td>7.00 %</td>
                                     <td>1.00 %</td>
                                     <td>2.30 %</td>
@@ -638,7 +647,7 @@
                                 <tr>
                                     <td>3</td>
                                     <td>01 Apr 2025</td>
-                                    <td class="col-rate-index-val">MCLR 3M</td>
+                                    <td class="col-base-index-val">FIXED</td>
                                     <td>6.85 %</td>
                                     <td>1.00 %</td>
                                     <td>2.25 %</td>
@@ -647,7 +656,7 @@
                                 <tr>
                                     <td>4</td>
                                     <td>01 Mar 2025</td>
-                                    <td class="col-rate-index-val">MCLR 3M</td>
+                                    <td class="col-base-index-val">JIBAR</td>
                                     <td>6.65 %</td>
                                     <td>1.00 %</td>
                                     <td>2.20 %</td>
@@ -656,7 +665,7 @@
                                 <tr>
                                     <td>5</td>
                                     <td>01 Feb 2025</td>
-                                    <td class="col-rate-index-val">MCLR 3M</td>
+                                    <td class="col-base-index-val">JIBAR</td>
                                     <td>6.50 %</td>
                                     <td>1.00 %</td>
                                     <td>2.15 %</td>
@@ -665,7 +674,7 @@
                                 <tr>
                                     <td>6</td>
                                     <td>01 Jan 2025</td>
-                                    <td class="col-rate-index-val">MCLR 3M</td>
+                                    <td class="col-base-index-val">FIXED</td>
                                     <td>6.30 %</td>
                                     <td>1.00 %</td>
                                     <td>2.10 %</td>
@@ -674,7 +683,7 @@
                                 <tr>
                                     <td>7</td>
                                     <td>01 Dec 2024</td>
-                                    <td class="col-rate-index-val">MCLR 3M</td>
+                                    <td class="col-base-index-val">JIBAR</td>
                                     <td>6.10 %</td>
                                     <td>1.00 %</td>
                                     <td>2.05 %</td>
@@ -683,7 +692,7 @@
                                 <tr>
                                     <td>8</td>
                                     <td>01 Nov 2024</td>
-                                    <td class="col-rate-index-val">MCLR 3M</td>
+                                    <td class="col-base-index-val">JIBAR</td>
                                     <td>5.95 %</td>
                                     <td>1.00 %</td>
                                     <td>2.00 %</td>
@@ -715,7 +724,7 @@
         const viewHistoryLinks = document.querySelectorAll('.view-history-link');
         const historyPopup = document.getElementById('historyPopup');
         const closePopupBtn = document.getElementById('closePopupBtn');
-        
+
         // Popup inputs
         const popupSubtitle = document.getElementById('popupSubtitle');
         const popupCompanyName = document.getElementById('popupCompanyName');
@@ -725,28 +734,28 @@
         viewHistoryLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
-                
+
                 let isBorrower = false;
                 let companyName = "sample company name";
                 let baseRate = "";
                 let reserveRate = "";
                 let spreadRate = "";
                 let allInRate = "";
-                
+
                 // Determine if borrower or lender
                 const borrowerCard = link.closest('.borrower-card');
                 if (borrowerCard) {
                     isBorrower = true;
                     const compNameEl = borrowerCard.querySelector('.company-name');
                     if (compNameEl) companyName = compNameEl.textContent.trim();
-                    
+
                     const ratesRow = link.closest('.borrower-rates-row');
                     if (ratesRow) {
                         const baseEl = ratesRow.querySelector('.rate-blue');
                         const reserveEl = ratesRow.querySelector('.rate-green');
                         const spreadEl = ratesRow.querySelector('.rate-red');
                         const allInEl = ratesRow.querySelector('.rate-amber');
-                        
+
                         if (baseEl) baseRate = baseEl.textContent.trim();
                         if (reserveEl) reserveRate = reserveEl.textContent.trim();
                         if (spreadEl) spreadRate = spreadEl.textContent.trim();
@@ -759,35 +768,35 @@
                         const nameEl = tableRow.querySelector('.col-lenders .meta-value');
                         if (nameEl) companyName = nameEl.textContent.trim();
                     }
-                    
+
                     const lenderRow = link.closest('.lender-rates-row');
                     if (lenderRow) {
                         const baseEl = lenderRow.querySelector('.col-base-rate-sub .meta-value');
                         const reserveEl = lenderRow.querySelector('.col-reserve-rate-sub .meta-value');
                         const spreadEl = lenderRow.querySelector('.col-spread-rate-sub .meta-value');
                         const allInEl = lenderRow.querySelector('.col-all-in-rate .all-in-rate-value');
-                        
+
                         if (baseEl) baseRate = baseEl.textContent.trim();
                         if (reserveEl) reserveRate = reserveEl.textContent.trim();
                         if (spreadEl) spreadRate = spreadEl.textContent.trim();
                         if (allInEl) allInRate = allInEl.textContent.trim();
                     }
                 }
-                
+
                 // Populate popup values
                 popupSubtitle.textContent = isBorrower ? "Borrower Info" : "Lender Info";
                 popupCompanyName.textContent = companyName;
                 popupHistoryTitle.textContent = companyName;
-                
+
                 const historyTable = document.getElementById('historyTable');
                 if (historyTable) {
                     if (isBorrower) {
-                        historyTable.classList.remove('show-rate-index');
+                        historyTable.classList.remove('show-base-index');
                     } else {
-                        historyTable.classList.add('show-rate-index');
+                        historyTable.classList.add('show-base-index');
                     }
                 }
-                
+
                 // Load single rate row HTML
                 const singleRateHtml = `
                     <div class="popup-rate-column">
@@ -795,7 +804,7 @@
                         <span class="popup-rate-value rate-blue">${baseRate}</span>
                     </div>
                     <div class="popup-rate-column">
-                        <span class="popup-rate-label">Bank Cost</span>
+                        <span class="popup-rate-label">Stat/Bank Cost/CAS</span>
                         <span class="popup-rate-value rate-green">${reserveRate}</span>
                     </div>
                     <div class="popup-rate-column">
@@ -808,7 +817,7 @@
                     </div>
                 `;
                 popupRatesContainer.innerHTML = singleRateHtml;
-                
+
                 // Open popup
                 historyPopup.classList.add('active');
                 document.body.style.overflow = 'hidden'; // prevent scroll behind
@@ -821,7 +830,7 @@
             document.body.style.overflow = '';
             popupFilterPopover.classList.remove('active');
         });
-        
+
         // Also close on background click
         historyPopup.addEventListener('click', (e) => {
             if (e.target === historyPopup) {
@@ -830,7 +839,7 @@
                 popupFilterPopover.classList.remove('active');
             }
         });
-        
+
         // Close on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && historyPopup.classList.contains('active')) {
@@ -899,7 +908,7 @@
             const query = popupSearchInput.value.toLowerCase().trim();
             const currentRows = document.querySelectorAll('#historyTable tbody tr');
             let visibleCount = 0;
-            
+
             currentRows.forEach(row => {
                 const text = row.textContent.toLowerCase();
                 if (text.includes(query)) {
@@ -909,7 +918,7 @@
                     row.style.display = 'none';
                 }
             });
-            
+
             popupEntriesInfo.textContent = `Showing ${visibleCount > 0 ? 1 : 0} to ${visibleCount} of ${currentRows.length} entries`;
         });
 
@@ -918,12 +927,12 @@
             popupSubtitle.textContent = "Borrower Info";
             popupCompanyName.textContent = "sample company name";
             popupHistoryTitle.textContent = "sample company name";
-            
+
             const historyTable = document.getElementById('historyTable');
             if (historyTable) {
-                historyTable.classList.remove('show-rate-index');
+                historyTable.classList.remove('show-base-index');
             }
-            
+
             const scrollableRatesHtml = `
                 <div class="borrower-rates-group popup-rates-scroll-group" style="width: 100%;">
                     <!-- Active Rate Row 1 -->
@@ -934,7 +943,7 @@
                                 <span class="rate-value rate-blue">7.75%</span>
                             </div>
                             <div class="rate-column">
-                                <span class="rate-label">Bank Cost</span>
+                                <span class="rate-label">Stat/Bank Cost/CAS</span>
                                 <span class="rate-value rate-green">0.21%</span>
                             </div>
                             <div class="rate-column">
@@ -959,7 +968,7 @@
                                 <span class="rate-value rate-blue">8.25%</span>
                             </div>
                             <div class="rate-column">
-                                <span class="rate-label">Bank Cost</span>
+                                <span class="rate-label">Stat/Bank Cost/CAS</span>
                                 <span class="rate-value rate-green">0.35%</span>
                             </div>
                             <div class="rate-column">
@@ -984,7 +993,7 @@
                                 <span class="rate-value rate-blue">7.50%</span>
                             </div>
                             <div class="rate-column">
-                                <span class="rate-label">Bank Cost</span>
+                                <span class="rate-label">Stat/Bank Cost/CAS</span>
                                 <span class="rate-value rate-green">0.15%</span>
                             </div>
                             <div class="rate-column">
@@ -1007,9 +1016,9 @@
                             <div class="rate-column">
                                 <span class="rate-label">Base Rate</span>
                                 <span class="rate-value rate-blue">8.00%</span>
-                            </div>
+                                </div>
                             <div class="rate-column">
-                                <span class="rate-label">Bank Cost</span>
+                                <span class="rate-label">Stat/Bank Cost/CAS</span>
                                 <span class="rate-value rate-green">0.30%</span>
                             </div>
                             <div class="rate-column">
@@ -1028,7 +1037,7 @@
                 </div>
             `;
             popupRatesContainer.innerHTML = scrollableRatesHtml;
-            
+
             // Set up click handlers for select rate
             const selectRateLinks = popupRatesContainer.querySelectorAll('.popup-select-rate-link');
             const rateRows = popupRatesContainer.querySelectorAll('.borrower-rates-row');
@@ -1047,7 +1056,7 @@
             selectRateLinks.forEach((link, index) => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
-                    
+
                     // Reset all rows and links
                     rateRows.forEach(row => {
                         row.classList.remove('selected-rate-row');
@@ -1077,7 +1086,7 @@
         }
 
         // History data configurations by selected active rate row index
-        const historyDataByRateIndex = [
+        const historyDataByBaseIndex = [
             [
                 { id: 1, date: "07 May 2025", base: "7.10 %", reserve: "1.10 %", spread: "2.25 %", allIn: "10.45 %" },
                 { id: 2, date: "01 May 2025", base: "7.00 %", reserve: "1.00 %", spread: "2.30 %", allIn: "10.30 %" },
@@ -1120,17 +1129,18 @@
             ]
         ];
 
-        function updateHistoryTable(rateIndex) {
-            const data = historyDataByRateIndex[rateIndex];
+        function updateHistoryTable(baseIndex) {
+            const data = historyDataByBaseIndex[baseIndex];
             if (!data) return;
 
             let tableHtml = "";
             data.forEach(item => {
+                const displayIndexName = item.baseIndex || (item.id === 3 || item.id === 6 ? 'FIXED' : 'JIBAR');
                 tableHtml += `
                     <tr>
                         <td>${item.id}</td>
                         <td>${item.date}</td>
-                        <td class="col-rate-index-val">${item.rateIndex || 'MCLR 3M'}</td>
+                        <td class="col-base-index-val">${displayIndexName}</td>
                         <td>${item.base}</td>
                         <td>${item.reserve}</td>
                         <td>${item.spread}</td>
@@ -1138,12 +1148,12 @@
                     </tr>
                 `;
             });
-            
+
             const tableBody = document.querySelector('#historyTable tbody');
             if (tableBody) {
                 tableBody.innerHTML = tableHtml;
             }
-            
+
             const entriesInfo = document.getElementById('popupEntriesInfo');
             if (entriesInfo) {
                 entriesInfo.textContent = `Showing 1 to ${data.length} of ${data.length} entries`;
@@ -1159,5 +1169,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>

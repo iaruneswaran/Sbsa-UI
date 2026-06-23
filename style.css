@@ -17,7 +17,7 @@
     
     /* Rate Colors */
     --color-base: #1a73e8;         /* Base rate: vibrant blue */
-    --color-reserve: #1e8e3e;      /* Bank Cost: clean green */
+    --color-reserve: #1e8e3e;      /* Stat/Bank Cost/CAS: clean green */
     --color-spread: #d93025;       /* Spread rate: soft red */
     --color-amber: #f2994a;        /* All-in rate: amber orange */
     
@@ -933,16 +933,6 @@ body {
     text-align: center;
 }
 
-/* Rate Index Column (Hidden by default, shown when table has show-rate-index class) */
-.popup-table th.h-col-rate-index,
-.popup-table td.col-rate-index-val {
-    display: none;
-}
-
-.popup-table.show-rate-index th.h-col-rate-index,
-.popup-table.show-rate-index td.col-rate-index-val {
-    display: table-cell;
-}
 
 /* History Table Footer */
 .popup-table-footer {

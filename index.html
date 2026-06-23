@@ -28,7 +28,182 @@
 
             <!-- Main Content Area -->
             <main class="app-main">
-                <div class="participation-container">
+                <!-- Loan Info View (Borrower View Layout) -->
+                <div class="main-content-wrapper" id="loanInfoView">
+                    <!-- Breadcrumb -->
+                    <div class="breadcrumb-bar">
+                        <span class="breadcrumb-blue">Deal 360 (# <span class="lowercase-id">sample id</span>)</span>
+                        <svg class="breadcrumb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        <span class="breadcrumb-current">Loan Details</span>
+                    </div>
+
+                    <!-- Facility Details Card -->
+                    <div class="facility-card">
+                        <h3 class="facility-title">Facility Details</h3>
+                        <div class="facility-grid">
+                            <div class="facility-col">
+                                <div class="facility-icon-wrapper icon-blue">
+                                    <svg class="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                                    </svg>
+                                </div>
+                                <div class="facility-text">
+                                    <span class="facility-val-bold">sample company name</span>
+                                    <span class="facility-sub">#0000065017</span>
+                                </div>
+                            </div>
+                            <div class="facility-col">
+                                <div class="facility-icon-wrapper icon-red">
+                                    <svg class="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                        <line x1="9" y1="22" x2="9" y2="16"></line>
+                                        <line x1="15" y1="22" x2="15" y2="16"></line>
+                                        <line x1="9" y1="16" x2="15" y2="16"></line>
+                                        <path d="M8 6h2v2H8V6zm6 0h2v2h-2V6zm-6 5h2v2H8v-2zm6 0h2v2h-2v-2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="facility-text">
+                                    <span class="facility-label">Facility Name</span>
+                                    <span class="facility-val">sample company name</span>
+                                </div>
+                            </div>
+                            <div class="facility-col">
+                                <div class="facility-icon-wrapper icon-green">
+                                    <svg class="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <line x1="6" y1="12" x2="6.01" y2="12"></line>
+                                        <line x1="18" y1="12" x2="18.01" y2="12"></line>
+                                    </svg>
+                                </div>
+                                <div class="facility-text">
+                                    <span class="facility-label">Facility Amount</span>
+                                    <span class="facility-val">842,084,937.36</span>
+                                </div>
+                            </div>
+                            <div class="facility-col">
+                                <div class="facility-icon-wrapper icon-purple">
+                                    <svg class="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="facility-text">
+                                    <span class="facility-label">Facility Type</span>
+                                    <span class="facility-val">TERM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loan Info Table Container -->
+                    <div class="participation-container">
+                        <!-- Modal Header -->
+                        <header class="modal-header">
+                            <h1 class="modal-title">Loan Info</h1>
+                            <div class="header-actions">
+                                <div class="search-container">
+                                    <input type="text" class="search-input" id="loanSearchInput" placeholder="Find">
+                                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                    </svg>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Modal Content -->
+                        <main class="modal-content">
+                            <!-- Loan Details and Interest Details Section -->
+                            <section class="loan-info-section">
+                                <!-- Blue Section Sub-Header -->
+                                <div class="loan-info-sub-header">
+                                    <div class="sub-header-left">Loan Details</div>
+                                    <div class="sub-header-right">Interest Details</div>
+                                </div>
+
+                                <!-- Details Grid -->
+                                <div class="loan-details-grid" id="loanDetailsGrid">
+                                    <!-- Column 1 (Loan Details) -->
+                                    <div class="loan-col">
+                                        <div class="loan-item">
+                                            <span class="loan-label">Loan ID</span>
+                                            <span class="loan-value">sample ID</span>
+                                        </div>
+                                        <div class="loan-item">
+                                            <span class="loan-label">
+                                                Loan Amount
+                                                <svg class="info-icon-orange" viewBox="0 0 24 24" fill="none" stroke="#f2994a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                </svg>
+                                            </span>
+                                            <span class="loan-value">sample VALUE</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 2 (Loan Details) -->
+                                    <div class="loan-col">
+                                        <div class="loan-item">
+                                            <span class="loan-label">
+                                                Principal Balance
+                                                <svg class="info-icon-orange" viewBox="0 0 24 24" fill="none" stroke="#f2994a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                                                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                                </svg>
+                                            </span>
+                                            <span class="loan-value">sample VALUE</span>
+                                        </div>
+                                        <div class="loan-item">
+                                            <span class="loan-label">Maturity Date</span>
+                                            <span class="loan-value">31 Jul 2029</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 3 (Interest Details) -->
+                                    <div class="loan-col">
+                                        <div class="loan-item">
+                                            <span class="loan-label">Interest Rate Type</span>
+                                            <span class="loan-value">sample name</span>
+                                        </div>
+                                        <div class="loan-item">
+                                            <span class="loan-label">Interest Rate Period</span>
+                                            <span class="loan-value">QUARTERLY</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 4 (Interest Details) -->
+                                    <div class="loan-col">
+                                        <div class="loan-item">
+                                            <span class="loan-label">Current Interest Period Start Date</span>
+                                            <span class="loan-value">31 Mar 2025</span>
+                                        </div>
+                                        <div class="loan-item">
+                                            <span class="loan-label">Current Interest Period End Date</span>
+                                            <span class="loan-value">31 Mar 2025</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 5 (Navigation Link Back) -->
+                                    <div class="loan-col col-nav-link">
+                                        <div class="loan-item">
+                                            <a href="#" class="participant-info-link" id="participantInfoLink">Participant Info</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </main>
+                    </div>
+                </div>
+
+                <!-- Existing Agency View Container -->
+                <div class="participation-container" id="participationInfoView" style="display: none;">
                     <!-- Modal Header -->
                     <header class="modal-header">
                         <h1 class="modal-title">Participation Info</h1>
@@ -1293,6 +1468,43 @@
             if (entriesInfo) {
                 entriesInfo.textContent = `Showing 1 to ${data.length} of ${data.length} entries`;
             }
+        }
+
+        // Switch between Loan Info View and Participation Info View on click
+        const participantInfoLink = document.getElementById('participantInfoLink');
+        const loanInfoView = document.getElementById('loanInfoView');
+        const participationInfoView = document.getElementById('participationInfoView');
+
+        if (participantInfoLink) {
+            participantInfoLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                loanInfoView.style.display = 'none';
+                participationInfoView.style.display = 'flex';
+            });
+        }
+
+        // Simple search filtering logic for items on this page (Loan Details Grid search)
+        const loanSearchInput = document.getElementById('loanSearchInput');
+        const loanItems = document.querySelectorAll('#loanDetailsGrid .loan-item');
+
+        if (loanSearchInput) {
+            loanSearchInput.addEventListener('input', () => {
+                const query = loanSearchInput.value.toLowerCase().trim();
+                loanItems.forEach(item => {
+                    if (item.querySelector('.participant-info-link')) return;
+
+                    const label = item.querySelector('.loan-label')?.textContent.toLowerCase() || '';
+                    const value = item.querySelector('.loan-value')?.textContent.toLowerCase() || '';
+                    
+                    if (label.includes(query) || value.includes(query)) {
+                        item.style.opacity = '1';
+                        item.style.pointerEvents = 'auto';
+                    } else {
+                        item.style.opacity = '0.2';
+                        item.style.pointerEvents = 'none';
+                    }
+                });
+            });
         }
 
         // Automatically open Borrower History popup if navigated from Participant Info

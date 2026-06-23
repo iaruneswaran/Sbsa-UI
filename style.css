@@ -17,7 +17,7 @@
     
     /* Rate Colors */
     --color-base: #1a73e8;         /* Base rate: vibrant blue */
-    --color-reserve: #1e8e3e;      /* Reserve rate: clean green */
+    --color-reserve: #1e8e3e;      /* Bank Cost: clean green */
     --color-spread: #d93025;       /* Spread rate: soft red */
     --color-amber: #f2994a;        /* All-in rate: amber orange */
     
@@ -51,17 +51,78 @@ body {
     padding: 0;
 }
 
-/* Modal Overlay & Outer Container */
-.modal-overlay {
-    width: 100vw;
-    min-height: 100vh;
-    background-color: rgba(15, 23, 42, 0.08); /* very light dim on the outer area */
+/* Application Layout System */
+.app-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 32px 24px;
-    cursor: pointer; /* hint that outer area is clickable */
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
+
+.app-header {
+    height: 56px;
+    background-color: var(--primary-blue);
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.app-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.app-sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.app-main {
+    flex: 1;
+    background-color: var(--bg-page);
+    padding: 32px 40px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Sidebar Navigation Menu */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 8px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav-item:hover {
+    background-color: var(--border-color-light);
+    color: var(--text-primary);
+}
+
+.nav-item.active {
+    background-color: #e8f0fe;
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
 
 .participation-container {
     width: 100%;
@@ -870,6 +931,17 @@ body {
 .popup-table th.h-col-rate,
 .popup-table td:nth-child(n+3) {
     text-align: center;
+}
+
+/* Rate Index Column (Hidden by default, shown when table has show-rate-index class) */
+.popup-table th.h-col-rate-index,
+.popup-table td.col-rate-index-val {
+    display: none;
+}
+
+.popup-table.show-rate-index th.h-col-rate-index,
+.popup-table.show-rate-index td.col-rate-index-val {
+    display: table-cell;
 }
 
 /* History Table Footer */

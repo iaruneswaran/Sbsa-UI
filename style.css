@@ -285,6 +285,7 @@ body {
     color: var(--text-secondary);
     margin-bottom: 6px;
     text-align: left;
+    white-space: nowrap;
 }
 
 .rate-value {
@@ -479,6 +480,7 @@ body {
     color: var(--text-secondary);
     font-weight: 400;
     flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .meta-value {
@@ -519,7 +521,7 @@ body {
 }
 
 .col-reserve-rate-sub {
-    width: 110px;
+    width: 160px;
     flex-shrink: 0;
 }
 
@@ -784,6 +786,7 @@ body {
     color: var(--text-secondary);
     margin-bottom: 6px;
     text-align: left;
+    white-space: nowrap;
 }
 
 .popup-rate-value {
@@ -897,6 +900,7 @@ body {
     padding: 12px 24px;
     font-size: 0.85em;
     font-weight: 400;
+    white-space: nowrap;
 }
 
 .popup-table td {
@@ -930,7 +934,7 @@ body {
 
 .popup-table th.h-col-rate,
 .popup-table td:nth-child(n+3) {
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -1463,6 +1467,7 @@ body {
     transform: rotate(45deg);
     margin-right: 4px;
     margin-bottom: 2px;
+}.rate-header-item {
+    white-space: nowrap;
 }
-
 

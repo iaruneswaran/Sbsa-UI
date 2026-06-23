@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation Info</title>
+    <!-- Google Fonts: Inter with light/regular/medium weights only (no bold) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modal-overlay">
+        <div class="participation-container">
+            <!-- Modal Header -->
+            <header class="modal-header">
+                <h1 class="modal-title">Participation Info</h1>
+            </header>
+
+            <!-- Modal Content -->
+            <main class="modal-content">
+                <!-- Borrower Info Card (Supports Multiple Rates) -->
+                <section class="borrower-card">
+                    <div class="borrower-main-info">
+                        <h2 class="section-subtitle">Borrower Info</h2>
+                        <div class="company-name">sample company name</div>
+                    </div>
+                    
+                    <div class="borrower-rates-group">
+                        <!-- Active Rate Row 1 -->
+                        <div class="borrower-rates-row">
+                            <div class="borrower-rates-container">
+                                <div class="rate-column">
+                                    <span class="rate-label">Base Rate</span>
+                                    <span class="rate-value rate-blue">7.75%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">Reserve Rate</span>
+                                    <span class="rate-value rate-green">0.21%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">Spread Rate</span>
+                                    <span class="rate-value rate-red">4%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">All in Rate</span>
+                                    <span class="rate-value rate-amber">11.96%</span>
+                                </div>
+                                <div class="rate-column rate-action-column">
+                                    <a href="#" class="view-history-link">View History</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Rate Row 2 -->
+                        <div class="borrower-rates-row">
+                            <div class="borrower-rates-container">
+                                <div class="rate-column">
+                                    <span class="rate-label">Base Rate</span>
+                                    <span class="rate-value rate-blue">8.25%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">Reserve Rate</span>
+                                    <span class="rate-value rate-green">0.35%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">Spread Rate</span>
+                                    <span class="rate-value rate-red">3.5%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">All in Rate</span>
+                                    <span class="rate-value rate-amber">12.10%</span>
+                                </div>
+                                <div class="rate-column rate-action-column">
+                                    <a href="#" class="view-history-link">View History</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Rate Row 3 -->
+                        <div class="borrower-rates-row">
+                            <div class="borrower-rates-container">
+                                <div class="rate-column">
+                                    <span class="rate-label">Base Rate</span>
+                                    <span class="rate-value rate-blue">7.50%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">Reserve Rate</span>
+                                    <span class="rate-value rate-green">0.15%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">Spread Rate</span>
+                                    <span class="rate-value rate-red">4.2%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">All in Rate</span>
+                                    <span class="rate-value rate-amber">11.85%</span>
+                                </div>
+                                <div class="rate-column rate-action-column">
+                                    <a href="#" class="view-history-link">View History</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Rate Row 4 -->
+                        <div class="borrower-rates-row">
+                            <div class="borrower-rates-container">
+                                <div class="rate-column">
+                                    <span class="rate-label">Base Rate</span>
+                                    <span class="rate-value rate-blue">8.00%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">Reserve Rate</span>
+                                    <span class="rate-value rate-green">0.30%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">Spread Rate</span>
+                                    <span class="rate-value rate-red">3.8%</span>
+                                </div>
+                                <div class="rate-column">
+                                    <span class="rate-label">All in Rate</span>
+                                    <span class="rate-value rate-amber">12.10%</span>
+                                </div>
+                                <div class="rate-column rate-action-column">
+                                    <a href="#" class="view-history-link">View History</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Lenders Info Section -->
+                <section class="lenders-section">
+                    <div class="lenders-header">
+                        <h2 class="section-subtitle">Lenders Info</h2>
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="Find">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Lenders Table -->
+                    <div class="lenders-table">
+                        <!-- Table Header Bar -->
+                        <div class="table-header-bar">
+                            <div class="header-col col-lenders">Lenders</div>
+                            <div class="header-col col-rate-info col-rate-info-header">
+                                <span class="rate-header-item col-base-rate-sub">Base Rate</span>
+                                <span class="rate-header-item col-reserve-rate-sub">Reserve Rate</span>
+                                <span class="rate-header-item col-spread-rate-sub">Spread Rate</span>
+                            </div>
+                            <div class="header-col col-all-in-rate">All in Rate</div>
+                        </div>
+
+                        <!-- Table Body -->
+                        <div class="table-body">
+                            <!-- Row 1 (Multiple Active Rates) -->
+                            <div class="table-row table-row-multiple">
+                                <div class="row-col col-lenders">
+                                    <div class="meta-item">
+                                        <span class="meta-label">Name</span>
+                                        <span class="meta-value">sample company name</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Participation Amount</span>
+                                        <span class="meta-value currency-value">INR 5555,5555</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="lender-rates-group">
+                                    <!-- Rate Set 1 -->
+                                    <div class="lender-rates-row">
+                                        <div class="row-col col-rate-info">
+                                            <div class="meta-item col-base-rate-sub">
+                                                <span class="meta-label">Base Rate</span>
+                                                <span class="meta-value">7.75%</span>
+                                            </div>
+                                            <div class="meta-item col-reserve-rate-sub">
+                                                <span class="meta-label">Reserve Rate</span>
+                                                <span class="meta-value">0.21%</span>
+                                            </div>
+                                            <div class="meta-item col-spread-rate-sub">
+                                                <span class="meta-label">Spread Rate</span>
+                                                <span class="meta-value">4%</span>
+                                            </div>
+                                        </div>
+                                        <div class="row-col col-all-in-rate">
+                                            <span class="all-in-rate-value">11.96%</span>
+                                        </div>
+                                        <div class="row-col col-actions">
+                                            <a href="#" class="view-history-link">View History</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Rate Set 2 -->
+                                    <div class="lender-rates-row">
+                                        <div class="row-col col-rate-info">
+                                            <div class="meta-item col-base-rate-sub">
+                                                <span class="meta-label">Base Rate</span>
+                                                <span class="meta-value">8.25%</span>
+                                            </div>
+                                            <div class="meta-item col-reserve-rate-sub">
+                                                <span class="meta-label">Reserve Rate</span>
+                                                <span class="meta-value">0.35%</span>
+                                            </div>
+                                            <div class="meta-item col-spread-rate-sub">
+                                                <span class="meta-label">Spread Rate</span>
+                                                <span class="meta-value">3.5%</span>
+                                            </div>
+                                        </div>
+                                        <div class="row-col col-all-in-rate">
+                                            <span class="all-in-rate-value">12.10%</span>
+                                        </div>
+                                        <div class="row-col col-actions">
+                                            <a href="#" class="view-history-link">View History</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Rate Set 3 -->
+                                    <div class="lender-rates-row">
+                                        <div class="row-col col-rate-info">
+                                            <div class="meta-item col-base-rate-sub">
+                                                <span class="meta-label">Base Rate</span>
+                                                <span class="meta-value">7.50%</span>
+                                            </div>
+                                            <div class="meta-item col-reserve-rate-sub">
+                                                <span class="meta-label">Reserve Rate</span>
+                                                <span class="meta-value">0.15%</span>
+                                            </div>
+                                            <div class="meta-item col-spread-rate-sub">
+                                                <span class="meta-label">Spread Rate</span>
+                                                <span class="meta-value">4.2%</span>
+                                            </div>
+                                        </div>
+                                        <div class="row-col col-all-in-rate">
+                                            <span class="all-in-rate-value">11.85%</span>
+                                        </div>
+                                        <div class="row-col col-actions">
+                                            <a href="#" class="view-history-link">View History</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Rate Set 4 -->
+                                    <div class="lender-rates-row">
+                                        <div class="row-col col-rate-info">
+                                            <div class="meta-item col-base-rate-sub">
+                                                <span class="meta-label">Base Rate</span>
+                                                <span class="meta-value">8.00%</span>
+                                            </div>
+                                            <div class="meta-item col-reserve-rate-sub">
+                                                <span class="meta-label">Reserve Rate</span>
+                                                <span class="meta-value">0.30%</span>
+                                            </div>
+                                            <div class="meta-item col-spread-rate-sub">
+                                                <span class="meta-label">Spread Rate</span>
+                                                <span class="meta-value">3.8%</span>
+                                            </div>
+                                        </div>
+                                        <div class="row-col col-all-in-rate">
+                                            <span class="all-in-rate-value">12.10%</span>
+                                        </div>
+                                        <div class="row-col col-actions">
+                                            <a href="#" class="view-history-link">View History</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 2 (Multiple Active Rates) -->
+                            <div class="table-row table-row-multiple">
+                                <div class="row-col col-lenders">
+                                    <div class="meta-item">
+                                        <span class="meta-label">Name</span>
+                                        <span class="meta-value">sample company name</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <span class="meta-label">Participation Amount</span>
+                                        <span class="meta-value currency-value">INR 5555,5555</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="lender-rates-group">
+                                    <!-- Rate Set 1 -->
+                                    <div class="lender-rates-row">
+                                        <div class="row-col col-rate-info">
+                                            <div class="meta-item col-base-rate-sub">
+                                                <span class="meta-label">Base Rate</span>
+                                                <span class="meta-value">7.75%</span>
+                                            </div>
+                                            <div class="meta-item col-reserve-rate-sub">
+                                                <span class="meta-label">Reserve Rate</span>
+                                                <span class="meta-value">0.21%</span>
+                                            </div>
+                                            <div class="meta-item col-spread-rate-sub">
+                                                <span class="meta-label">Spread Rate</span>
+                                                <span class="meta-value">4%</span>
+                                            </div>
+                                        </div>
+                                        <div class="row-col col-all-in-rate">
+                                            <span class="all-in-rate-value">11.96%</span>
+                                        </div>
+                                        <div class="row-col col-actions">
+                                            <a href="#" class="view-history-link">View History</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Rate Set 2 -->
+                                    <div class="lender-rates-row">
+                                        <div class="row-col col-rate-info">
+                                            <div class="meta-item col-base-rate-sub">
+                                                <span class="meta-label">Base Rate</span>
+                                                <span class="meta-value">8.50%</span>
+                                            </div>
+                                            <div class="meta-item col-reserve-rate-sub">
+                                                <span class="meta-label">Reserve Rate</span>
+                                                <span class="meta-value">0.40%</span>
+                                            </div>
+                                            <div class="meta-item col-spread-rate-sub">
+                                                <span class="meta-label">Spread Rate</span>
+                                                <span class="meta-value">3.0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="row-col col-all-in-rate">
+                                            <span class="all-in-rate-value">12.30%</span>
+                                        </div>
+                                        <div class="row-col col-actions">
+                                            <a href="#" class="view-history-link">View History</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Space for main page end -->
+            </main>
+        </div>
+    </div>
+
+    <!-- History Popup Modal (Triggered by View History links) -->
+    <div class="popup-overlay" id="historyPopup">
+        <div class="popup-container">
+            <!-- Popup Header -->
+            <header class="popup-header">
+                <h1 class="popup-title">Participation Info</h1>
+                <button class="popup-close-btn" id="closePopupBtn" aria-label="Close popup">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Popup Content -->
+            <div class="popup-content">
+                <!-- Static Borrower Card -->
+                <section class="popup-borrower-card">
+                    <div class="popup-borrower-main">
+                        <h2 class="popup-subtitle" id="popupSubtitle">Borrower Info</h2>
+                        <div class="popup-company-name" id="popupCompanyName">sample company name</div>
+                    </div>
+                    
+                    <div class="popup-rates-container" id="popupRatesContainer">
+                        <div class="popup-rate-column">
+                            <span class="popup-rate-label">Base Rate</span>
+                            <span class="popup-rate-value rate-blue">7.75%</span>
+                        </div>
+                        <div class="popup-rate-column">
+                            <span class="popup-rate-label">Reserve Rate</span>
+                            <span class="popup-rate-value rate-green">0.21%</span>
+                        </div>
+                        <div class="popup-rate-column">
+                            <span class="popup-rate-label">Spread Rate</span>
+                            <span class="popup-rate-value rate-red">4%</span>
+                        </div>
+                        <div class="popup-rate-column">
+                            <span class="popup-rate-label">All in Rate</span>
+                            <span class="popup-rate-value rate-amber">11.96%</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- History Table Section -->
+                <section class="popup-history-section">
+                    <header class="popup-history-header">
+                        <h2 class="popup-history-title" id="popupHistoryTitle">sample company name</h2>
+                        <div class="popup-history-actions">
+                            <!-- Download Button -->
+                            <button class="popup-action-btn download-btn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download
+                            </button>
+
+                            <!-- Filter Button -->
+                            <button class="popup-action-btn filter-btn" id="popupFilterBtn">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                                </svg>
+                                Filter
+                            </button>
+
+                            <!-- Filter Popover -->
+                            <div class="popup-filter-popover" id="popupFilterPopover">
+                                <!-- Left Panel: Calendar (Shown when "Custom" option is active) -->
+                                <div class="popup-calendar-panel" id="popupCalendarPanel">
+                                    <header class="popup-calendar-header">
+                                        <button class="cal-nav-btn prev-month" aria-label="Previous months">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 18 9 12 15 6"></polyline>
+                                            </svg>
+                                        </button>
+                                        <span class="popup-calendar-month-title">May 2025</span>
+                                        <span class="popup-calendar-month-title">June 2025</span>
+                                        <button class="cal-nav-btn next-month" aria-label="Next months">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="9 18 15 12 9 6"></polyline>
+                                            </svg>
+                                        </button>
+                                    </header>
+                                    
+                                    <div class="popup-calendar-grids-container">
+                                        <!-- May 2025 -->
+                                        <div class="popup-calendar-grid">
+                                            <div class="day-name">Mo</div>
+                                            <div class="day-name">Tu</div>
+                                            <div class="day-name">We</div>
+                                            <div class="day-name">Th</div>
+                                            <div class="day-name">Fr</div>
+                                            <div class="day-name">Sa</div>
+                                            <div class="day-name">Su</div>
+
+                                            <!-- May Days -->
+                                            <div class="day-number other-month">28</div>
+                                            <div class="day-number other-month">29</div>
+                                            <div class="day-number other-month">30</div>
+                                            <div class="day-number range-start range-selected">1</div>
+                                            <div class="day-number range-selected">2</div>
+                                            <div class="day-number range-selected">3</div>
+                                            <div class="day-number range-selected">4</div>
+                                            
+                                            <div class="day-number range-selected">5</div>
+                                            <div class="day-number range-selected">6</div>
+                                            <div class="day-number range-selected">7</div>
+                                            <div class="day-number range-selected">8</div>
+                                            <div class="day-number range-selected">9</div>
+                                            <div class="day-number range-selected">10</div>
+                                            <div class="day-number range-selected">11</div>
+                                            
+                                            <div class="day-number range-selected">12</div>
+                                            <div class="day-number range-selected">13</div>
+                                            <div class="day-number range-selected">14</div>
+                                            <div class="day-number range-selected">15</div>
+                                            <div class="day-number range-selected">16</div>
+                                            <div class="day-number range-selected">17</div>
+                                            <div class="day-number range-selected">18</div>
+                                            
+                                            <div class="day-number range-selected">19</div>
+                                            <div class="day-number range-selected">20</div>
+                                            <div class="day-number range-selected">21</div>
+                                            <div class="day-number range-end range-selected">22</div>
+                                            <div class="day-number">23</div>
+                                            <div class="day-number">24</div>
+                                            <div class="day-number">25</div>
+                                            
+                                            <div class="day-number">26</div>
+                                            <div class="day-number">27</div>
+                                            <div class="day-number">28</div>
+                                            <div class="day-number">29</div>
+                                            <div class="day-number">30</div>
+                                            <div class="day-number">31</div>
+                                            <div class="day-number other-month">1</div>
+                                        </div>
+
+                                        <!-- June 2025 -->
+                                        <div class="popup-calendar-grid">
+                                            <div class="day-name">Mo</div>
+                                            <div class="day-name">Tu</div>
+                                            <div class="day-name">We</div>
+                                            <div class="day-name">Th</div>
+                                            <div class="day-name">Fr</div>
+                                            <div class="day-name">Sa</div>
+                                            <div class="day-name">Su</div>
+
+                                            <!-- June Days -->
+                                            <div class="day-number other-month">26</div>
+                                            <div class="day-number other-month">27</div>
+                                            <div class="day-number other-month">28</div>
+                                            <div class="day-number other-month">29</div>
+                                            <div class="day-number other-month">30</div>
+                                            <div class="day-number other-month">31</div>
+                                            <div class="day-number">1</div>
+                                            
+                                            <div class="day-number">2</div>
+                                            <div class="day-number">3</div>
+                                            <div class="day-number">4</div>
+                                            <div class="day-number">5</div>
+                                            <div class="day-number">6</div>
+                                            <div class="day-number">7</div>
+                                            <div class="day-number">8</div>
+                                            
+                                            <div class="day-number">9</div>
+                                            <div class="day-number">10</div>
+                                            <div class="day-number">11</div>
+                                            <div class="day-number">12</div>
+                                            <div class="day-number">13</div>
+                                            <div class="day-number">14</div>
+                                            <div class="day-number">15</div>
+                                            
+                                            <div class="day-number">16</div>
+                                            <div class="day-number">17</div>
+                                            <div class="day-number">18</div>
+                                            <div class="day-number">19</div>
+                                            <div class="day-number">20</div>
+                                            <div class="day-number">21</div>
+                                            <div class="day-number">22</div>
+                                            
+                                            <div class="day-number">23</div>
+                                            <div class="day-number">24</div>
+                                            <div class="day-number">25</div>
+                                            <div class="day-number">26</div>
+                                            <div class="day-number">27</div>
+                                            <div class="day-number">28</div>
+                                            <div class="day-number">29</div>
+                                            
+                                            <div class="day-number">30</div>
+                                            <div class="day-number other-month">1</div>
+                                            <div class="day-number other-month">2</div>
+                                            <div class="day-number other-month">3</div>
+                                            <div class="day-number other-month">4</div>
+                                            <div class="day-number other-month">5</div>
+                                            <div class="day-number other-month">6</div>
+                                        </div>
+                                    </div>
+
+                                    <footer class="popup-calendar-footer">
+                                        <button class="clear-btn" id="popupClearBtn">Clear</button>
+                                        <button class="apply-btn" id="popupApplyBtn">Apply</button>
+                                    </footer>
+                                </div>
+
+                                <!-- Right Panel: Date Radio Options -->
+                                <div class="popup-filter-menu-panel">
+                                    <h3 class="popup-filter-heading">Date</h3>
+                                    <div class="popup-filter-options-list">
+                                        <label class="popup-radio-option">
+                                            <input type="radio" name="popup-filter-date" value="yesterday">
+                                            <span class="popup-custom-radio"></span>
+                                            Yesterday
+                                        </label>
+                                        <label class="popup-radio-option">
+                                            <input type="radio" name="popup-filter-date" value="1month">
+                                            <span class="popup-custom-radio"></span>
+                                            Last 1 Month
+                                        </label>
+                                        <label class="popup-radio-option">
+                                            <input type="radio" name="popup-filter-date" value="1year">
+                                            <span class="popup-custom-radio"></span>
+                                            Last 1 Year
+                                        </label>
+                                        <label class="popup-radio-option">
+                                            <input type="radio" name="popup-filter-date" value="custom" checked>
+                                            <span class="popup-custom-radio"></span>
+                                            Custom
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Find Input -->
+                            <div class="popup-search-container">
+                                <input type="text" class="popup-search-input" id="popupSearchInput" placeholder="Find">
+                                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Table content -->
+                    <div class="popup-table-container">
+                        <table class="popup-table" id="historyTable">
+                            <thead>
+                                <tr>
+                                    <th class="h-col-hash">#</th>
+                                    <th class="h-col-date">Effective Date</th>
+                                    <th class="h-col-rate">Base Rate</th>
+                                    <th class="h-col-rate">Reserve Rate</th>
+                                    <th class="h-col-rate">Spread Rate</th>
+                                    <th class="h-col-rate">All in Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>07 May 2025</td>
+                                    <td>7.10 %</td>
+                                    <td>1.10 %</td>
+                                    <td>2.25 %</td>
+                                    <td class="rate-blue-val">10.45 %</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>01 May 2025</td>
+                                    <td>7.00 %</td>
+                                    <td>1.00 %</td>
+                                    <td>2.30 %</td>
+                                    <td class="rate-blue-val">10.30 %</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>01 Apr 2025</td>
+                                    <td>6.85 %</td>
+                                    <td>1.00 %</td>
+                                    <td>2.25 %</td>
+                                    <td class="rate-blue-val">10.10 %</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>01 Mar 2025</td>
+                                    <td>6.65 %</td>
+                                    <td>1.00 %</td>
+                                    <td>2.20 %</td>
+                                    <td class="rate-blue-val">9.85 %</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>01 Feb 2025</td>
+                                    <td>6.50 %</td>
+                                    <td>1.00 %</td>
+                                    <td>2.15 %</td>
+                                    <td class="rate-blue-val">9.65 %</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>01 Jan 2025</td>
+                                    <td>6.30 %</td>
+                                    <td>1.00 %</td>
+                                    <td>2.10 %</td>
+                                    <td class="rate-blue-val">9.40 %</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>01 Dec 2024</td>
+                                    <td>6.10 %</td>
+                                    <td>1.00 %</td>
+                                    <td>2.05 %</td>
+                                    <td class="rate-blue-val">9.15 %</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>01 Nov 2024</td>
+                                    <td>5.95 %</td>
+                                    <td>1.00 %</td>
+                                    <td>2.00 %</td>
+                                    <td class="rate-blue-val">8.95 %</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Table Footer -->
+                    <footer class="popup-table-footer">
+                        <span class="entries-info" id="popupEntriesInfo">Showing 1 to 8 of 8 entries</span>
+                        <div class="rows-per-page-container">
+                            <span>Rows per page:</span>
+                            <select class="rows-per-page-select" id="popupRowsSelect">
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Clicking the outer grey overlay navigates to Loan Info page
+        const modalOverlay = document.querySelector('.modal-overlay');
+        const participationContainer = document.querySelector('.participation-container');
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', (e) => {
+                // Only navigate if click is on the overlay itself, not inside the card
+                if (!participationContainer.contains(e.target)) {
+                    window.location.href = 'loan_info.html';
+                }
+            });
+        }
+        const viewHistoryLinks = document.querySelectorAll('.view-history-link');
+        const historyPopup = document.getElementById('historyPopup');
+        const closePopupBtn = document.getElementById('closePopupBtn');
+        
+        // Popup inputs
+        const popupSubtitle = document.getElementById('popupSubtitle');
+        const popupCompanyName = document.getElementById('popupCompanyName');
+        const popupRatesContainer = document.getElementById('popupRatesContainer');
+        const popupHistoryTitle = document.getElementById('popupHistoryTitle');
+
+        viewHistoryLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                let isBorrower = false;
+                let companyName = "sample company name";
+                let baseRate = "";
+                let reserveRate = "";
+                let spreadRate = "";
+                let allInRate = "";
+                
+                // Determine if borrower or lender
+                const borrowerCard = link.closest('.borrower-card');
+                if (borrowerCard) {
+                    isBorrower = true;
+                    const compNameEl = borrowerCard.querySelector('.company-name');
+                    if (compNameEl) companyName = compNameEl.textContent.trim();
+                    
+                    const ratesRow = link.closest('.borrower-rates-row');
+                    if (ratesRow) {
+                        const baseEl = ratesRow.querySelector('.rate-blue');
+                        const reserveEl = ratesRow.querySelector('.rate-green');
+                        const spreadEl = ratesRow.querySelector('.rate-red');
+                        const allInEl = ratesRow.querySelector('.rate-amber');
+                        
+                        if (baseEl) baseRate = baseEl.textContent.trim();
+                        if (reserveEl) reserveRate = reserveEl.textContent.trim();
+                        if (spreadEl) spreadRate = spreadEl.textContent.trim();
+                        if (allInEl) allInRate = allInEl.textContent.trim();
+                    }
+                } else {
+                    // Lender
+                    const tableRow = link.closest('.table-row');
+                    if (tableRow) {
+                        const nameEl = tableRow.querySelector('.col-lenders .meta-value');
+                        if (nameEl) companyName = nameEl.textContent.trim();
+                    }
+                    
+                    const lenderRow = link.closest('.lender-rates-row');
+                    if (lenderRow) {
+                        const baseEl = lenderRow.querySelector('.col-base-rate-sub .meta-value');
+                        const reserveEl = lenderRow.querySelector('.col-reserve-rate-sub .meta-value');
+                        const spreadEl = lenderRow.querySelector('.col-spread-rate-sub .meta-value');
+                        const allInEl = lenderRow.querySelector('.col-all-in-rate .all-in-rate-value');
+                        
+                        if (baseEl) baseRate = baseEl.textContent.trim();
+                        if (reserveEl) reserveRate = reserveEl.textContent.trim();
+                        if (spreadEl) spreadRate = spreadEl.textContent.trim();
+                        if (allInEl) allInRate = allInEl.textContent.trim();
+                    }
+                }
+                
+                // Populate popup values
+                popupSubtitle.textContent = isBorrower ? "Borrower Info" : "Lender Info";
+                popupCompanyName.textContent = companyName;
+                popupHistoryTitle.textContent = companyName;
+                
+                // Load single rate row HTML
+                const singleRateHtml = `
+                    <div class="popup-rate-column">
+                        <span class="popup-rate-label">Base Rate</span>
+                        <span class="popup-rate-value rate-blue">${baseRate}</span>
+                    </div>
+                    <div class="popup-rate-column">
+                        <span class="popup-rate-label">Reserve Rate</span>
+                        <span class="popup-rate-value rate-green">${reserveRate}</span>
+                    </div>
+                    <div class="popup-rate-column">
+                        <span class="popup-rate-label">Spread Rate</span>
+                        <span class="popup-rate-value rate-red">${spreadRate}</span>
+                    </div>
+                    <div class="popup-rate-column">
+                        <span class="popup-rate-label">All in Rate</span>
+                        <span class="popup-rate-value rate-amber">${allInRate}</span>
+                    </div>
+                `;
+                popupRatesContainer.innerHTML = singleRateHtml;
+                
+                // Open popup
+                historyPopup.classList.add('active');
+                document.body.style.overflow = 'hidden'; // prevent scroll behind
+            });
+        });
+
+        // Close popup
+        closePopupBtn.addEventListener('click', () => {
+            historyPopup.classList.remove('active');
+            document.body.style.overflow = '';
+            popupFilterPopover.classList.remove('active');
+        });
+        
+        // Also close on background click
+        historyPopup.addEventListener('click', (e) => {
+            if (e.target === historyPopup) {
+                historyPopup.classList.remove('active');
+                document.body.style.overflow = '';
+                popupFilterPopover.classList.remove('active');
+            }
+        });
+        
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && historyPopup.classList.contains('active')) {
+                historyPopup.classList.remove('active');
+                document.body.style.overflow = '';
+                popupFilterPopover.classList.remove('active');
+            }
+        });
+
+        // Filter popover logic inside popup
+        const popupFilterBtn = document.getElementById('popupFilterBtn');
+        const popupFilterPopover = document.getElementById('popupFilterPopover');
+        const popupCalendarPanel = document.getElementById('popupCalendarPanel');
+        const popupClearBtn = document.getElementById('popupClearBtn');
+        const popupApplyBtn = document.getElementById('popupApplyBtn');
+        const popupDateRadios = document.querySelectorAll('input[name="popup-filter-date"]');
+
+        popupFilterBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            popupFilterPopover.classList.toggle('active');
+        });
+
+        popupFilterPopover.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        popupDateRadios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.value === 'custom') {
+                    popupCalendarPanel.style.display = 'flex';
+                } else {
+                    popupCalendarPanel.style.display = 'none';
+                }
+            });
+        });
+
+        // Initialize calendar panel visibility state
+        const checkedRadio = document.querySelector('input[name="popup-filter-date"]:checked');
+        if (checkedRadio && checkedRadio.value === 'custom') {
+            popupCalendarPanel.style.display = 'flex';
+        } else {
+            popupCalendarPanel.style.display = 'none';
+        }
+
+        popupClearBtn.addEventListener('click', () => {
+            document.querySelectorAll('.popup-calendar-grid .day-number.range-selected').forEach(day => {
+                day.classList.remove('range-selected', 'range-start', 'range-end');
+            });
+        });
+
+        popupApplyBtn.addEventListener('click', () => {
+            popupFilterPopover.classList.remove('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target !== popupFilterBtn && !popupFilterPopover.contains(e.target)) {
+                popupFilterPopover.classList.remove('active');
+            }
+        });
+
+        // Find/Search filter logic inside history table
+        const popupSearchInput = document.getElementById('popupSearchInput');
+        const popupEntriesInfo = document.getElementById('popupEntriesInfo');
+
+        popupSearchInput.addEventListener('input', () => {
+            const query = popupSearchInput.value.toLowerCase().trim();
+            const currentRows = document.querySelectorAll('#historyTable tbody tr');
+            let visibleCount = 0;
+            
+            currentRows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+            
+            popupEntriesInfo.textContent = `Showing ${visibleCount > 0 ? 1 : 0} to ${visibleCount} of ${currentRows.length} entries`;
+        });
+
+        // Dedicated function to open Borrower History popup with multiple active rates
+        function openPopupWithMultipleRates() {
+            popupSubtitle.textContent = "Borrower Info";
+            popupCompanyName.textContent = "sample company name";
+            popupHistoryTitle.textContent = "sample company name";
+            
+            const scrollableRatesHtml = `
+                <div class="borrower-rates-group popup-rates-scroll-group" style="width: 100%;">
+                    <!-- Active Rate Row 1 -->
+                    <div class="borrower-rates-row">
+                        <div class="borrower-rates-container">
+                            <div class="rate-column">
+                                <span class="rate-label">Base Rate</span>
+                                <span class="rate-value rate-blue">7.75%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">Reserve Rate</span>
+                                <span class="rate-value rate-green">0.21%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">Spread Rate</span>
+                                <span class="rate-value rate-red">4%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">All in Rate</span>
+                                <span class="rate-value rate-amber">11.96%</span>
+                            </div>
+                            <div class="rate-column rate-action-column">
+                                <a href="#" class="popup-select-rate-link">Select Rate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Rate Row 2 -->
+                    <div class="borrower-rates-row">
+                        <div class="borrower-rates-container">
+                            <div class="rate-column">
+                                <span class="rate-label">Base Rate</span>
+                                <span class="rate-value rate-blue">8.25%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">Reserve Rate</span>
+                                <span class="rate-value rate-green">0.35%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">Spread Rate</span>
+                                <span class="rate-value rate-red">3.5%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">All in Rate</span>
+                                <span class="rate-value rate-amber">12.10%</span>
+                            </div>
+                            <div class="rate-column rate-action-column">
+                                <a href="#" class="popup-select-rate-link">Select Rate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Rate Row 3 -->
+                    <div class="borrower-rates-row">
+                        <div class="borrower-rates-container">
+                            <div class="rate-column">
+                                <span class="rate-label">Base Rate</span>
+                                <span class="rate-value rate-blue">7.50%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">Reserve Rate</span>
+                                <span class="rate-value rate-green">0.15%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">Spread Rate</span>
+                                <span class="rate-value rate-red">4.2%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">All in Rate</span>
+                                <span class="rate-value rate-amber">11.85%</span>
+                            </div>
+                            <div class="rate-column rate-action-column">
+                                <a href="#" class="popup-select-rate-link">Select Rate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Rate Row 4 -->
+                    <div class="borrower-rates-row">
+                        <div class="borrower-rates-container">
+                            <div class="rate-column">
+                                <span class="rate-label">Base Rate</span>
+                                <span class="rate-value rate-blue">8.00%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">Reserve Rate</span>
+                                <span class="rate-value rate-green">0.30%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">Spread Rate</span>
+                                <span class="rate-value rate-red">3.8%</span>
+                            </div>
+                            <div class="rate-column">
+                                <span class="rate-label">All in Rate</span>
+                                <span class="rate-value rate-amber">12.10%</span>
+                            </div>
+                            <div class="rate-column rate-action-column">
+                                <a href="#" class="popup-select-rate-link">Select Rate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            popupRatesContainer.innerHTML = scrollableRatesHtml;
+            
+            // Set up click handlers for select rate
+            const selectRateLinks = popupRatesContainer.querySelectorAll('.popup-select-rate-link');
+            const rateRows = popupRatesContainer.querySelectorAll('.borrower-rates-row');
+
+            // Select the first rate row by default
+            if (rateRows.length > 0) {
+                rateRows[0].classList.add('selected-rate-row');
+                const firstLink = rateRows[0].querySelector('.popup-select-rate-link');
+                if (firstLink) {
+                    firstLink.classList.add('is-selected');
+                    firstLink.innerHTML = 'Selected';
+                }
+                updateHistoryTable(0);
+            }
+
+            selectRateLinks.forEach((link, index) => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Reset all rows and links
+                    rateRows.forEach(row => {
+                        row.classList.remove('selected-rate-row');
+                        const rowLink = row.querySelector('.popup-select-rate-link');
+                        if (rowLink) {
+                            rowLink.classList.remove('is-selected');
+                            rowLink.innerHTML = 'Select Rate';
+                        }
+                    });
+
+                    // Set selected row and link
+                    const selectedRow = rateRows[index];
+                    if (selectedRow) {
+                        selectedRow.classList.add('selected-rate-row');
+                    }
+                    link.classList.add('is-selected');
+                    link.innerHTML = 'Selected';
+
+                    // Update bottom history table dynamically
+                    updateHistoryTable(index);
+                });
+            });
+
+            // Open popup
+            historyPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // History data configurations by selected active rate row index
+        const historyDataByRateIndex = [
+            [
+                { id: 1, date: "07 May 2025", base: "7.10 %", reserve: "1.10 %", spread: "2.25 %", allIn: "10.45 %" },
+                { id: 2, date: "01 May 2025", base: "7.00 %", reserve: "1.00 %", spread: "2.30 %", allIn: "10.30 %" },
+                { id: 3, date: "01 Apr 2025", base: "6.85 %", reserve: "1.00 %", spread: "2.25 %", allIn: "10.10 %" },
+                { id: 4, date: "01 Mar 2025", base: "6.65 %", reserve: "1.00 %", spread: "2.20 %", allIn: "9.85 %" },
+                { id: 5, date: "01 Feb 2025", base: "6.50 %", reserve: "1.00 %", spread: "2.15 %", allIn: "9.65 %" },
+                { id: 6, date: "01 Jan 2025", base: "6.30 %", reserve: "1.00 %", spread: "2.10 %", allIn: "9.40 %" },
+                { id: 7, date: "01 Dec 2024", base: "6.10 %", reserve: "1.00 %", spread: "2.05 %", allIn: "9.15 %" },
+                { id: 8, date: "01 Nov 2024", base: "5.95 %", reserve: "1.00 %", spread: "2.00 %", allIn: "8.95 %" }
+            ],
+            [
+                { id: 1, date: "15 May 2025", base: "7.50 %", reserve: "1.25 %", spread: "2.50 %", allIn: "11.25 %" },
+                { id: 2, date: "01 May 2025", base: "7.40 %", reserve: "1.20 %", spread: "2.45 %", allIn: "11.05 %" },
+                { id: 3, date: "15 Apr 2025", base: "7.30 %", reserve: "1.15 %", spread: "2.40 %", allIn: "10.85 %" },
+                { id: 4, date: "01 Apr 2025", base: "7.20 %", reserve: "1.10 %", spread: "2.35 %", allIn: "10.65 %" },
+                { id: 5, date: "15 Mar 2025", base: "7.10 %", reserve: "1.05 %", spread: "2.30 %", allIn: "10.45 %" },
+                { id: 6, date: "01 Mar 2025", base: "7.00 %", reserve: "1.00 %", spread: "2.25 %", allIn: "10.25 %" },
+                { id: 7, date: "15 Feb 2025", base: "6.90 %", reserve: "0.95 %", spread: "2.20 %", allIn: "10.05 %" },
+                { id: 8, date: "01 Feb 2025", base: "6.80 %", reserve: "0.90 %", spread: "2.15 %", allIn: "9.85 %" }
+            ],
+            [
+                { id: 1, date: "20 May 2025", base: "6.95 %", reserve: "0.85 %", spread: "2.10 %", allIn: "9.90 %" },
+                { id: 2, date: "10 May 2025", base: "6.85 %", reserve: "0.80 %", spread: "2.05 %", allIn: "9.70 %" },
+                { id: 3, date: "01 May 2025", base: "6.75 %", reserve: "0.75 %", spread: "2.00 %", allIn: "9.50 %" },
+                { id: 4, date: "20 Apr 2025", base: "6.65 %", reserve: "0.70 %", spread: "1.95 %", allIn: "9.30 %" },
+                { id: 5, date: "10 Apr 2025", base: "6.55 %", reserve: "0.65 %", spread: "1.90 %", allIn: "9.10 %" },
+                { id: 6, date: "01 Apr 2025", base: "6.45 %", reserve: "0.60 %", spread: "1.85 %", allIn: "8.90 %" },
+                { id: 7, date: "20 Mar 2025", base: "6.35 %", reserve: "0.55 %", spread: "1.80 %", allIn: "8.70 %" },
+                { id: 8, date: "10 Mar 2025", base: "6.25 %", reserve: "0.50 %", spread: "1.75 %", allIn: "8.50 %" }
+            ],
+            [
+                { id: 1, date: "25 May 2025", base: "7.30 %", reserve: "1.00 %", spread: "2.30 %", allIn: "10.60 %" },
+                { id: 2, date: "15 May 2025", base: "7.20 %", reserve: "0.95 %", spread: "2.25 %", allIn: "10.40 %" },
+                { id: 3, date: "05 May 2025", base: "7.10 %", reserve: "0.90 %", spread: "2.20 %", allIn: "10.20 %" },
+                { id: 4, date: "25 Apr 2025", base: "7.00 %", reserve: "0.85 %", spread: "2.15 %", allIn: "10.00 %" },
+                { id: 5, date: "15 Apr 2025", base: "6.90 %", reserve: "0.80 %", spread: "2.10 %", allIn: "9.80 %" },
+                { id: 6, date: "05 Apr 2025", base: "6.80 %", reserve: "0.75 %", spread: "2.05 %", allIn: "9.60 %" },
+                { id: 7, date: "25 Mar 2025", base: "6.70 %", reserve: "0.70 %", spread: "2.00 %", allIn: "9.40 %" },
+                { id: 8, date: "15 Mar 2025", base: "6.60 %", reserve: "0.65 %", spread: "1.95 %", allIn: "9.20 %" }
+            ]
+        ];
+
+        function updateHistoryTable(rateIndex) {
+            const data = historyDataByRateIndex[rateIndex];
+            if (!data) return;
+
+            let tableHtml = "";
+            data.forEach(item => {
+                tableHtml += `
+                    <tr>
+                        <td>${item.id}</td>
+                        <td>${item.date}</td>
+                        <td>${item.base}</td>
+                        <td>${item.reserve}</td>
+                        <td>${item.spread}</td>
+                        <td class="rate-blue-val">${item.allIn}</td>
+                    </tr>
+                `;
+            });
+            
+            const tableBody = document.querySelector('#historyTable tbody');
+            if (tableBody) {
+                tableBody.innerHTML = tableHtml;
+            }
+            
+            const entriesInfo = document.getElementById('popupEntriesInfo');
+            if (entriesInfo) {
+                entriesInfo.textContent = `Showing 1 to ${data.length} of ${data.length} entries`;
+            }
+        }
+
+        // Automatically open Borrower History popup if navigated from Participant Info
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('showHistory') === 'true') {
+                openPopupWithMultipleRates();
+            }
+        });
+    </script>
+</body>
+</html>
+

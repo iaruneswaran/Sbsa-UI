@@ -1,0 +1,1406 @@
+/* Design System & Custom Properties */
+:root {
+    --bg-page: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --border-color-light: #f1f5f9;
+    
+    /* Text Colors */
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    
+    /* Brand / Accent Colors (Tailored HSL) */
+    --primary-blue: #0b57d0;       /* Modern, clean blue for header bar */
+    --link-color: #0b57d0;
+    --link-hover: #083c91;
+    
+    /* Rate Colors */
+    --color-base: #1a73e8;         /* Base rate: vibrant blue */
+    --color-reserve: #1e8e3e;      /* Reserve rate: clean green */
+    --color-spread: #d93025;       /* Spread rate: soft red */
+    --color-amber: #f2994a;        /* All-in rate: amber orange */
+    
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Base resets and defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Modal Overlay & Outer Container */
+.modal-overlay {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(15, 23, 42, 0.08); /* very light dim on the outer area */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 24px;
+    cursor: pointer; /* hint that outer area is clickable */
+}
+
+.participation-container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: default; /* reset cursor inside the card */
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #ffffff;
+}
+
+.modal-title {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+}
+
+.close-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Modal Content Area */
+.modal-content {
+    padding: 24px;
+    background-color: var(--bg-page);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Borrower Info Card */
+.borrower-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+}
+
+.borrower-main-info {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.company-name {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.borrower-rates-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+    max-height: 124px;
+    overflow-y: auto;
+    margin-right: -12px;
+    padding-right: 16px;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--border-color) transparent !important;
+    -ms-overflow-style: auto !important;
+}
+
+/* Custom scrollbar styling specifically for borrower rates list */
+.borrower-rates-group::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+}
+
+.borrower-rates-group::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.borrower-rates-group::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 4px;
+}
+
+.borrower-rates-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.borrower-rates-row:not(:last-child) {
+    border-bottom: 1px solid var(--border-color-light);
+    padding-bottom: 16px;
+}
+
+.borrower-rates-container {
+    display: flex;
+    align-items: center;
+}
+
+.rate-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 28px;
+}
+
+.rate-action-column {
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 28px;
+}
+
+/* Add vertical borders between rate columns */
+.rate-column:not(:first-child) {
+    border-left: 1px solid var(--border-color);
+}
+
+.rate-label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.rate-value {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+/* Rate Colors */
+.rate-blue { color: var(--color-base); }
+.rate-green { color: var(--color-reserve); }
+.rate-red { color: var(--color-spread); }
+.rate-amber { color: var(--color-amber); }
+
+/* Common View History Link */
+.view-history-link {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.view-history-link:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Lenders Section */
+.lenders-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+    overflow: hidden;
+}
+
+.lenders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+/* Search Box style */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 220px;
+    padding: 8px 12px 8px 12px;
+    font-family: var(--font-family);
+    font-size: 0.85rem;
+    font-weight: 300;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.15);
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+/* Lenders Table & Grid Layout */
+.lenders-table {
+    width: 100%;
+}
+
+.table-header-bar {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    display: flex;
+    padding: 12px 24px;
+    align-items: center;
+}
+
+.header-col {
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+/* Layout Columns */
+.col-lenders {
+    width: 35%;
+}
+
+.col-rate-info {
+    width: 40%;
+}
+
+.col-all-in-rate {
+    width: 15%;
+}
+
+.col-actions {
+    width: 10%;
+    text-align: right;
+    margin-left: auto;
+}
+
+/* Table Body & Rows */
+.table-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-row {
+    display: flex;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-color-light);
+    align-items: flex-start;
+    transition: background-color 0.15s ease;
+}
+
+.lender-rates-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 65%;
+    flex-shrink: 0;
+}
+
+.lender-rates-row {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.lender-rates-row:not(:last-child) {
+    border-bottom: 1px solid var(--border-color-light);
+    padding-bottom: 16px;
+}
+
+/* Align nested rate row elements under the main header columns */
+.lender-rates-row .col-rate-info {
+    width: 61.54%;
+}
+
+.lender-rates-row .col-all-in-rate {
+    width: 23.08%;
+}
+
+.lender-rates-row .col-actions {
+    width: 15.38%;
+    text-align: right;
+    margin-left: auto;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row:hover {
+    background-color: #fafbfc;
+}
+
+.row-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Meta Data lists inside columns */
+.meta-item {
+    display: flex;
+    align-items: baseline;
+    font-size: 0.8rem;
+}
+
+.meta-label {
+    width: 160px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    flex-shrink: 0;
+}
+
+.meta-value {
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+.currency-value {
+    color: var(--text-primary);
+}
+
+/* Custom layout details for columns */
+.table-row .col-rate-info {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.table-row .col-rate-info .meta-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.table-row .col-rate-info .meta-label {
+    display: none;
+}
+
+.col-rate-info-header {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.col-base-rate-sub {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.col-reserve-rate-sub {
+    width: 110px;
+    flex-shrink: 0;
+}
+
+.col-spread-rate-sub {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.col-all-in-rate {
+    justify-content: flex-start;
+    padding-top: 2px;
+}
+
+.all-in-rate-value {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.col-actions {
+    padding-top: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .borrower-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .borrower-main-info {
+        width: 100%;
+    }
+    
+    .borrower-rates-group {
+        width: 100%;
+    }
+    
+    .borrower-rates-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .borrower-rates-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .rate-column {
+        padding: 0 10px;
+    }
+    
+    .rate-column:first-child {
+        padding-left: 0;
+    }
+    
+    .rate-action-column {
+        padding-left: 10px;
+    }
+    
+    .table-header-bar {
+        display: none; /* Hide header on mobile, fallback layout */
+    }
+    
+    .table-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .col-lenders, .col-rate-info, .col-all-in-rate, .col-actions {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .col-actions {
+        margin-left: 0;
+    }
+
+    .lender-rates-group {
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .lender-rates-row {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+    
+    .lender-rates-row:not(:last-child) {
+        border-bottom: 1px dashed var(--border-color);
+        padding-bottom: 20px;
+    }
+    
+    .lender-rates-row .col-rate-info,
+    .lender-rates-row .col-all-in-rate,
+    .lender-rates-row .col-actions {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* ==========================================
+   History Popup Modal Styles
+   ========================================== */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 23, 42, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    padding: 20px;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-container {
+    width: 100%;
+    max-width: 1100px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(15px);
+    transition: transform 0.25s ease;
+    max-height: 90vh;
+    font-size: 15px; /* Reduced by 1px (from default 16px base font-size) */
+}
+
+.popup-overlay.active .popup-container {
+    transform: translateY(0);
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #ffffff;
+}
+
+.popup-title {
+    font-size: 1.15em;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.popup-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.popup-close-btn:hover {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+}
+
+.popup-close-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.popup-content {
+    padding: 24px;
+    background-color: var(--bg-page);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+/* Static Borrower Info Card in Popup */
+.popup-borrower-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+}
+
+.popup-select-rate-link {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.popup-select-rate-link:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+.popup-borrower-main {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.popup-subtitle {
+    font-size: 0.95em;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.popup-company-name {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.popup-rates-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.popup-rate-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 28px;
+}
+
+.popup-rate-column:not(:first-child) {
+    border-left: 1px solid var(--border-color);
+}
+
+.popup-rate-label {
+    font-size: 0.75em;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.popup-rate-value {
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+/* History List Table Section */
+.popup-history-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+    overflow: visible; /* Allows date filter popover to overflow out of section bounds */
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color-light);
+    position: relative; /* Anchor for absolute positioned filter popover */
+}
+
+.popup-history-title {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.popup-history-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative; /* Relative bounds context for popover position calculation */
+}
+
+.popup-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font-family: var(--font-family);
+    font-size: 0.85em;
+    font-weight: 400;
+    color: var(--primary-blue);
+    background-color: #ffffff;
+    border: 1px solid var(--primary-blue);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.popup-action-btn:hover {
+    background-color: #f0f7ff;
+}
+
+.popup-action-btn .btn-icon {
+    width: 16px;
+    height: 16px;
+    stroke: var(--primary-blue);
+}
+
+.popup-search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.popup-search-input {
+    width: 220px;
+    padding: 8px 12px 8px 12px;
+    font-family: var(--font-family);
+    font-size: 0.85em;
+    font-weight: 300;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popup-search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.popup-search-input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(11, 87, 208, 0.15);
+}
+
+/* History Data Table */
+.popup-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.popup-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.popup-table th {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 0.85em;
+    font-weight: 400;
+}
+
+.popup-table td {
+    padding: 16px 24px;
+    font-size: 0.85em;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.popup-table tr:hover {
+    background-color: #fafbfc;
+}
+
+.popup-table .rate-blue-val {
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+/* Center and align columns to match layout specifications */
+.popup-table th.h-col-hash,
+.popup-table td:first-child {
+    width: 70px;
+    text-align: left;
+    padding-left: 24px;
+}
+
+.popup-table th.h-col-date,
+.popup-table td:nth-child(2) {
+    text-align: left;
+}
+
+.popup-table th.h-col-rate,
+.popup-table td:nth-child(n+3) {
+    text-align: center;
+}
+
+/* History Table Footer */
+.popup-table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-top: 1px solid var(--border-color-light);
+    background-color: #ffffff;
+}
+
+.popup-table-footer .entries-info {
+    font-size: 0.8em;
+    color: var(--text-secondary);
+}
+
+.popup-table-footer .rows-per-page-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8em;
+    color: var(--text-secondary);
+}
+
+.popup-table-footer .rows-per-page-select {
+    font-family: var(--font-family);
+    font-size: 0.8em;
+    padding: 4px 24px 4px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: var(--text-primary);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    background-size: 16px;
+}
+
+/* Filter Popover Structure */
+.popup-filter-popover {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: none; /* Controlled dynamically by .active class */
+    flex-direction: row;
+    z-index: 105;
+    overflow: hidden;
+}
+
+.popup-filter-popover.active {
+    display: flex;
+}
+
+/* Left Panel: Calendar Selection */
+.popup-calendar-panel {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color-light);
+    padding: 20px;
+    width: 600px;
+    background-color: #ffffff;
+}
+
+.popup-calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.popup-calendar-month-title {
+    font-size: 0.85em;
+    font-weight: 500;
+    color: var(--text-primary);
+    width: 50%;
+    text-align: center;
+}
+
+.popup-calendar-grids-container {
+    display: flex;
+    gap: 24px;
+}
+
+.popup-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    flex: 1;
+}
+
+.day-name {
+    font-size: 0.75em;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 4px 0;
+}
+
+.day-number {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: var(--text-primary);
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.day-number:hover {
+    background-color: var(--bg-page);
+}
+
+.day-number.other-month {
+    color: var(--text-muted);
+    opacity: 0.35;
+}
+
+/* Calendar Date Range Highlight (May 1 to May 22) */
+.day-number.range-selected {
+    background-color: #e8f0fe;
+    border-radius: 0;
+}
+
+.day-number.range-start {
+    background-color: var(--primary-blue) !important;
+    color: #ffffff !important;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.day-number.range-end {
+    background-color: var(--primary-blue) !important;
+    color: #ffffff !important;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.popup-calendar-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color-light);
+}
+
+.popup-calendar-footer button {
+    font-family: var(--font-family);
+    font-size: 0.8em;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.popup-calendar-footer .clear-btn {
+    background: none;
+    border: none;
+    color: var(--primary-blue);
+}
+
+.popup-calendar-footer .clear-btn:hover {
+    text-decoration: underline;
+}
+
+.popup-calendar-footer .apply-btn {
+    background-color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    color: #ffffff;
+}
+
+.popup-calendar-footer .apply-btn:hover {
+    background-color: var(--link-hover);
+    border-color: var(--link-hover);
+}
+
+/* Right Panel: Date Menu Selections */
+.popup-filter-menu-panel {
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.popup-filter-heading {
+    font-size: 0.85em;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.popup-filter-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.popup-radio-option {
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+    color: var(--text-primary);
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-left: 28px;
+}
+
+.popup-radio-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.popup-custom-radio {
+    position: absolute;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.popup-radio-option:hover input ~ .popup-custom-radio {
+    border-color: var(--primary-blue);
+}
+
+.popup-radio-option input:checked ~ .popup-custom-radio {
+    border-color: var(--primary-blue);
+    background-color: #ffffff;
+}
+
+.popup-custom-radio::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 4px;
+    left: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary-blue);
+}
+
+.popup-radio-option input:checked ~ .popup-custom-radio::after {
+    display: block;
+}
+
+/* ==========================================
+   Responsive Adaptations for Popup Modal
+   ========================================== */
+@media (max-width: 900px) {
+    .popup-overlay {
+        padding: 0;
+    }
+    
+    .popup-container {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+    
+    .popup-content {
+        padding: 16px;
+    }
+    
+    .popup-borrower-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .popup-borrower-main {
+        width: 100%;
+    }
+    
+    .popup-rates-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .popup-rate-column {
+        padding: 0 8px;
+    }
+    
+    .popup-rate-column:first-child {
+        padding-left: 0;
+    }
+    
+    .popup-history-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .popup-history-actions {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .popup-action-btn, 
+    .popup-search-container {
+        flex-grow: 1;
+    }
+    
+    .popup-search-input {
+        width: 100%;
+    }
+    
+    .popup-filter-popover {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-height: 80vh;
+        border-radius: 12px 12px 0 0;
+        margin-top: 0;
+        flex-direction: column;
+        box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .popup-calendar-panel {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color-light);
+        overflow-x: auto;
+        padding: 16px;
+    }
+    
+    .popup-calendar-grids-container {
+        min-width: 540px;
+    }
+    
+    .popup-filter-menu-panel {
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+/* ==========================================
+   Navigation and Header Actions
+   ========================================== */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+}
+
+.next-page-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-family: var(--font-family);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--primary-blue);
+    background-color: #ffffff;
+    border: 1px solid var(--primary-blue);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.next-page-btn:hover {
+    background-color: #f0f7ff;
+}
+
+.next-page-btn .nav-icon {
+    width: 14px;
+    height: 14px;
+}
+
+/* ==========================================
+   Loan Info Dashboard Styles
+   ========================================== */
+.loan-info-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.loan-info-sub-header {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    display: flex;
+    padding: 14px 24px;
+    align-items: center;
+}
+
+.sub-header-left {
+    width: 40%;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.sub-header-right {
+    width: 60%;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.loan-details-grid {
+    display: flex;
+    padding: 32px 24px;
+    background-color: #ffffff;
+    gap: 16px;
+}
+
+.loan-col {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.loan-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: opacity 0.25s ease;
+}
+
+.loan-label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+}
+
+.loan-value {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.info-icon-orange {
+    width: 14px;
+    height: 14px;
+    margin-left: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.participant-info-link {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.participant-info-link:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for Loan Info grid */
+@media (max-width: 900px) {
+    .loan-info-sub-header {
+        display: none; /* Hide header, fallback to labels */
+    }
+    
+    .loan-details-grid {
+        flex-direction: column;
+        padding: 20px;
+        gap: 24px;
+    }
+    
+    .loan-col {
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .loan-col.col-nav-link {
+        margin-top: 8px;
+        border-top: 1px solid var(--border-color-light);
+        padding-top: 16px;
+    }
+}
+
+/* Selected state for the select link */
+.popup-select-rate-link.is-selected {
+    color: #16a34a !important; /* Green text */
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    pointer-events: none; /* disable further clicks on the selected one */
+}
+
+.popup-select-rate-link.is-selected::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    border: solid #16a34a;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-right: 4px;
+    margin-bottom: 2px;
+}
+
+

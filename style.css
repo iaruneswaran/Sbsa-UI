@@ -306,6 +306,7 @@ body {
     color: var(--link-color);
     text-decoration: none;
     transition: color 0.2s ease, text-decoration 0.2s ease;
+    white-space: nowrap;
 }
 
 .view-history-link:hover {
@@ -389,15 +390,14 @@ body {
 
 /* Layout Columns */
 .col-lenders {
-    width: 35%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .col-rate-info {
-    width: 40%;
-}
-
-.col-all-in-rate {
-    width: 15%;
+    width: 65%;
 }
 
 .col-actions {
@@ -424,7 +424,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 65%;
+    width: 75%;
     flex-shrink: 0;
 }
 
@@ -441,15 +441,11 @@ body {
 
 /* Align nested rate row elements under the main header columns */
 .lender-rates-row .col-rate-info {
-    width: 61.54%;
-}
-
-.lender-rates-row .col-all-in-rate {
-    width: 23.08%;
+    width: 86.67%;
 }
 
 .lender-rates-row .col-actions {
-    width: 15.38%;
+    width: 13.33%;
     text-align: right;
     margin-left: auto;
 }
@@ -496,7 +492,7 @@ body {
 .table-row .col-rate-info {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 24px;
 }
 
 .table-row .col-rate-info .meta-item {
@@ -512,27 +508,33 @@ body {
 .col-rate-info-header {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 24px;
+}
+
+.col-base-index-sub {
+    width: 80px;
+    flex-shrink: 0;
 }
 
 .col-base-rate-sub {
-    width: 100px;
+    width: 80px;
     flex-shrink: 0;
 }
 
 .col-reserve-rate-sub {
-    width: 160px;
+    width: 140px;
     flex-shrink: 0;
 }
 
 .col-spread-rate-sub {
-    width: 100px;
+    width: 80px;
     flex-shrink: 0;
 }
 
-.col-all-in-rate {
-    justify-content: flex-start;
-    padding-top: 2px;
+.col-all-in-rate-sub {
+    width: 90px;
+    flex-shrink: 0;
+    margin-left: 80px;
 }
 
 .all-in-rate-value {
@@ -1470,4 +1472,189 @@ body {
 }.rate-header-item {
     white-space: nowrap;
 }
+
+.col-lenders .meta-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.col-lenders .meta-label {
+    width: auto;
+    font-size: 0.75rem;
+}
+
+/* Specific overrides to guarantee table columns align perfectly */
+.table-row .lender-rates-row .col-rate-info {
+    width: 86.67% !important;
+}
+.table-row .lender-rates-row .col-actions {
+    width: 13.33% !important;
+}
+
+/* ==========================================
+   Breadcrumb Bar & Facility Card
+   ========================================== */
+.main-content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.breadcrumb-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    padding: 0 4px;
+}
+
+.breadcrumb-blue {
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+.breadcrumb-blue .lowercase-id {
+    text-transform: lowercase;
+}
+
+.breadcrumb-chevron {
+    width: 12px;
+    height: 12px;
+    color: var(--text-secondary);
+}
+
+.breadcrumb-current {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.facility-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.facility-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.facility-grid {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.facility-col {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    padding: 0 24px;
+}
+
+.facility-col:not(:first-child) {
+    border-left: 1px solid var(--border-color-light);
+}
+
+.facility-col:first-child {
+    padding-left: 0;
+}
+
+.facility-col:last-child {
+    padding-right: 0;
+}
+
+.facility-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-blue {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+.icon-red {
+    background-color: #fce8e6;
+    color: #d93025;
+}
+
+.icon-green {
+    background-color: #e6f4ea;
+    color: #1e8e3e;
+}
+
+.icon-purple {
+    background-color: #f3e8fd;
+    color: #9333ea;
+}
+
+.facility-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.facility-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.facility-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.facility-val {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.facility-val-bold {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.facility-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+    .facility-grid {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+    
+    .facility-col {
+        padding: 16px 0;
+        border-left: none !important;
+    }
+    
+    .facility-col:not(:last-child) {
+        border-bottom: 1px solid var(--border-color-light);
+    }
+}
+
 

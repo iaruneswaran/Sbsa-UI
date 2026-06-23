@@ -19,32 +19,104 @@
             <!-- Left Sidebar Menu -->
             <aside class="app-sidebar">
                 <nav class="sidebar-nav">
-                    <a href="index.html" class="nav-item" id="navPage1">Page 1</a>
-                    <a href="loan_info.html" class="nav-item active" id="navPage2">Page 2</a>
+                    <a href="index.html" class="nav-item" id="navPage1">Agency view</a>
+                    <a href="loan_info.html" class="nav-item active" id="navPage2">Borrower view</a>
                 </nav>
             </aside>
             
             <!-- Main Content Area -->
             <main class="app-main">
-                <div class="participation-container">
-            <!-- Modal Header -->
-            <header class="modal-header">
-                <h1 class="modal-title">Loan Info</h1>
-                <div class="header-actions">
-                    <div class="search-container">
-                        <input type="text" class="search-input" id="loanSearchInput" placeholder="Find">
-                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <div class="main-content-wrapper">
+                    <!-- Breadcrumb -->
+                    <div class="breadcrumb-bar">
+                        <span class="breadcrumb-blue">Deal 360 (# <span class="lowercase-id">sample id</span>)</span>
+                        <svg class="breadcrumb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
+                        <span class="breadcrumb-current">Loan Details</span>
                     </div>
-                </div>
-            </header>
 
-            <!-- Modal Content -->
-            <main class="modal-content">
-                <!-- Loan Details and Interest Details Section -->
-                <section class="loan-info-section">
+                    <!-- Facility Details Card -->
+                    <div class="facility-card">
+                        <h3 class="facility-title">Facility Details</h3>
+                        <div class="facility-grid">
+                            <div class="facility-col">
+                                <div class="facility-icon-wrapper icon-blue">
+                                    <svg class="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                                    </svg>
+                                </div>
+                                <div class="facility-text">
+                                    <span class="facility-val-bold">sample company name</span>
+                                    <span class="facility-sub">#0000065017</span>
+                                </div>
+                            </div>
+                            <div class="facility-col">
+                                <div class="facility-icon-wrapper icon-red">
+                                    <svg class="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                        <line x1="9" y1="22" x2="9" y2="16"></line>
+                                        <line x1="15" y1="22" x2="15" y2="16"></line>
+                                        <line x1="9" y1="16" x2="15" y2="16"></line>
+                                        <path d="M8 6h2v2H8V6zm6 0h2v2h-2V6zm-6 5h2v2H8v-2zm6 0h2v2h-2v-2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="facility-text">
+                                    <span class="facility-label">Facility Name</span>
+                                    <span class="facility-val">sample company name</span>
+                                </div>
+                            </div>
+                            <div class="facility-col">
+                                <div class="facility-icon-wrapper icon-green">
+                                    <svg class="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <line x1="6" y1="12" x2="6.01" y2="12"></line>
+                                        <line x1="18" y1="12" x2="18.01" y2="12"></line>
+                                    </svg>
+                                </div>
+                                <div class="facility-text">
+                                    <span class="facility-label">Facility Amount</span>
+                                    <span class="facility-val">842,084,937.36</span>
+                                </div>
+                            </div>
+                            <div class="facility-col">
+                                <div class="facility-icon-wrapper icon-purple">
+                                    <svg class="facility-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="facility-text">
+                                    <span class="facility-label">Facility Type</span>
+                                    <span class="facility-val">TERM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loan Info Table Container -->
+                    <div class="participation-container">
+                        <!-- Modal Header -->
+                        <header class="modal-header">
+                            <h1 class="modal-title">Loan Info</h1>
+                            <div class="header-actions">
+                                <div class="search-container">
+                                    <input type="text" class="search-input" id="loanSearchInput" placeholder="Find">
+                                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                    </svg>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Modal Content -->
+                        <main class="modal-content">
+                            <!-- Loan Details and Interest Details Section -->
+                            <section class="loan-info-section">
                     <!-- Blue Section Sub-Header -->
                     <div class="loan-info-sub-header">
                         <div class="sub-header-left">Loan Details</div>
@@ -125,6 +197,7 @@
                 </section>
             </main>
         </div>
+    </div>
     </main>
 </div>
 </div>
@@ -134,7 +207,7 @@
         <div class="popup-container">
             <!-- Popup Header -->
             <header class="popup-header">
-                <h1 class="popup-title">Participation Info</h1>
+                <h1 class="popup-title">Loan Info</h1>
                 <button class="popup-close-btn" id="closePopupBtn" aria-label="Close popup">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -153,6 +226,10 @@
                     </div>
                     
                     <div class="popup-rates-container" id="popupRatesContainer">
+                        <div class="popup-rate-column">
+                            <span class="popup-rate-label">Base Index</span>
+                            <span class="popup-rate-value">Jibar</span>
+                        </div>
                         <div class="popup-rate-column">
                             <span class="popup-rate-label">Base Rate</span>
                             <span class="popup-rate-value rate-blue">7.75%</span>
@@ -391,7 +468,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>07 May 2025</td>
-                                    <td class="col-base-index-val">JIBAR</td>
+                                    <td class="col-base-index-val">Jibar</td>
                                     <td>7.10 %</td>
                                     <td>1.10 %</td>
                                     <td>2.25 %</td>
@@ -400,7 +477,7 @@
                                 <tr>
                                     <td>2</td>
                                     <td>01 May 2025</td>
-                                    <td class="col-base-index-val">JIBAR</td>
+                                    <td class="col-base-index-val">Jibar</td>
                                     <td>7.00 %</td>
                                     <td>1.00 %</td>
                                     <td>2.30 %</td>
@@ -409,7 +486,7 @@
                                 <tr>
                                     <td>3</td>
                                     <td>01 Apr 2025</td>
-                                    <td class="col-base-index-val">FIXED</td>
+                                    <td class="col-base-index-val">Fixed</td>
                                     <td>6.85 %</td>
                                     <td>1.00 %</td>
                                     <td>2.25 %</td>
@@ -418,7 +495,7 @@
                                 <tr>
                                     <td>4</td>
                                     <td>01 Mar 2025</td>
-                                    <td class="col-base-index-val">JIBAR</td>
+                                    <td class="col-base-index-val">Jibar</td>
                                     <td>6.65 %</td>
                                     <td>1.00 %</td>
                                     <td>2.20 %</td>
@@ -427,7 +504,7 @@
                                 <tr>
                                     <td>5</td>
                                     <td>01 Feb 2025</td>
-                                    <td class="col-base-index-val">JIBAR</td>
+                                    <td class="col-base-index-val">Jibar</td>
                                     <td>6.50 %</td>
                                     <td>1.00 %</td>
                                     <td>2.15 %</td>
@@ -436,7 +513,7 @@
                                 <tr>
                                     <td>6</td>
                                     <td>01 Jan 2025</td>
-                                    <td class="col-base-index-val">FIXED</td>
+                                    <td class="col-base-index-val">Fixed</td>
                                     <td>6.30 %</td>
                                     <td>1.00 %</td>
                                     <td>2.10 %</td>
@@ -445,7 +522,7 @@
                                 <tr>
                                     <td>7</td>
                                     <td>01 Dec 2024</td>
-                                    <td class="col-base-index-val">JIBAR</td>
+                                    <td class="col-base-index-val">Jibar</td>
                                     <td>6.10 %</td>
                                     <td>1.00 %</td>
                                     <td>2.05 %</td>
@@ -454,7 +531,7 @@
                                 <tr>
                                     <td>8</td>
                                     <td>01 Nov 2024</td>
-                                    <td class="col-base-index-val">JIBAR</td>
+                                    <td class="col-base-index-val">Jibar</td>
                                     <td>5.95 %</td>
                                     <td>1.00 %</td>
                                     <td>2.00 %</td>
@@ -534,6 +611,10 @@
                     <div class="borrower-rates-row">
                         <div class="borrower-rates-container">
                             <div class="rate-column">
+                                <span class="rate-label">Base Index</span>
+                                <span class="rate-value">Jibar</span>
+                            </div>
+                            <div class="rate-column">
                                 <span class="rate-label">Base Rate</span>
                                 <span class="rate-value rate-blue">7.75%</span>
                             </div>
@@ -558,6 +639,10 @@
                     <!-- Active Rate Row 2 -->
                     <div class="borrower-rates-row">
                         <div class="borrower-rates-container">
+                            <div class="rate-column">
+                                <span class="rate-label">Base Index</span>
+                                <span class="rate-value">Jibar</span>
+                            </div>
                             <div class="rate-column">
                                 <span class="rate-label">Base Rate</span>
                                 <span class="rate-value rate-blue">8.25%</span>
@@ -584,6 +669,10 @@
                     <div class="borrower-rates-row">
                         <div class="borrower-rates-container">
                             <div class="rate-column">
+                                <span class="rate-label">Base Index</span>
+                                <span class="rate-value">Fixed</span>
+                            </div>
+                            <div class="rate-column">
                                 <span class="rate-label">Base Rate</span>
                                 <span class="rate-value rate-blue">7.50%</span>
                             </div>
@@ -608,6 +697,10 @@
                     <!-- Active Rate Row 4 -->
                     <div class="borrower-rates-row">
                         <div class="borrower-rates-container">
+                            <div class="rate-column">
+                                <span class="rate-label">Base Index</span>
+                                <span class="rate-value">Jibar</span>
+                            </div>
                             <div class="rate-column">
                                 <span class="rate-label">Base Rate</span>
                                 <span class="rate-value rate-blue">8.00%</span>
@@ -730,7 +823,7 @@
 
             let tableHtml = "";
             data.forEach(item => {
-                const displayIndexName = item.baseIndex || (item.id === 3 || item.id === 6 ? 'FIXED' : 'JIBAR');
+                const displayIndexName = item.baseIndex || (item.id === 3 || item.id === 6 ? 'Fixed' : 'Jibar');
                 tableHtml += `
                     <tr>
                         <td>${item.id}</td>

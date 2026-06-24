@@ -224,7 +224,7 @@
                                     <div class="borrower-rates-container">
                                         <div class="rate-column">
                                             <span class="rate-label">Balance Category</span>
-                                            <span class="rate-value">INTEREST OWNING</span>
+                                            <span class="rate-value">INTEREST OWING</span>
                                         </div>
                                         <div class="rate-column">
                                             <span class="rate-label">Base Index</span>
@@ -337,7 +337,7 @@
                                                  <div class="row-col col-rate-info">
                                                      <div class="meta-item col-balance-category-sub">
                                                          <span class="meta-label">Balance Category</span>
-                                                         <span class="meta-value">INTEREST OWNING</span>
+                                                         <span class="meta-value">INTEREST OWING</span>
                                                      </div>
                                                      <div class="meta-item col-base-index-sub">
                                                          <span class="meta-label">Base Index</span>
@@ -419,7 +419,7 @@
                                                  <div class="row-col col-rate-info">
                                                      <div class="meta-item col-balance-category-sub">
                                                          <span class="meta-label">Balance Category</span>
-                                                         <span class="meta-value">INTEREST OWNING</span>
+                                                         <span class="meta-value">INTEREST OWING</span>
                                                      </div>
                                                      <div class="meta-item col-base-index-sub">
                                                          <span class="meta-label">Base Index</span>
@@ -519,7 +519,7 @@
                     <div class="popup-rates-container" id="popupRatesContainer">
                         <div class="popup-rate-column">
                             <span class="popup-rate-label">Balance Category</span>
-                            <span class="popup-rate-value">INTEREST OWNING</span>
+                            <span class="popup-rate-value">INTEREST OWING</span>
                         </div>
                         <div class="popup-rate-column">
                             <span class="popup-rate-label">Base Index</span>
@@ -796,7 +796,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>07 May 2025</td>
-                                    <td>INTEREST OWNING</td>
+                                    <td>INTEREST OWING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>7.10 %</td>
                                     <td>1.10 %</td>
@@ -806,7 +806,7 @@
                                 <tr>
                                     <td>2</td>
                                     <td>01 May 2025</td>
-                                    <td>INTEREST OWNING</td>
+                                    <td>INTEREST OWING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>7.00 %</td>
                                     <td>1.00 %</td>
@@ -826,7 +826,7 @@
                                 <tr>
                                     <td>4</td>
                                     <td>01 Mar 2025</td>
-                                    <td>INTEREST OWNING</td>
+                                    <td>INTEREST OWING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>6.65 %</td>
                                     <td>1.00 %</td>
@@ -836,7 +836,7 @@
                                 <tr>
                                     <td>5</td>
                                     <td>01 Feb 2025</td>
-                                    <td>INTEREST OWNING</td>
+                                    <td>INTEREST OWING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>6.50 %</td>
                                     <td>1.00 %</td>
@@ -856,7 +856,7 @@
                                 <tr>
                                     <td>7</td>
                                     <td>01 Dec 2024</td>
-                                    <td>INTEREST OWNING</td>
+                                    <td>INTEREST OWING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>6.10 %</td>
                                     <td>1.00 %</td>
@@ -866,7 +866,7 @@
                                 <tr>
                                     <td>8</td>
                                     <td>01 Nov 2024</td>
-                                    <td>INTEREST OWNING</td>
+                                    <td>INTEREST OWING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>5.95 %</td>
                                     <td>1.00 %</td>
@@ -978,7 +978,7 @@
                 }
 
                 // Load single rate row HTML
-                const balanceCategory = baseIndex === 'Fixed' ? 'PAYMENT IN KIND' : 'INTEREST OWNING';
+                const balanceCategory = baseIndex === 'Fixed' ? 'PAYMENT IN KIND' : 'INTEREST OWING';
                 const singleRateHtml = `
                     <div class="popup-rate-column">
                         <span class="popup-rate-label">Balance Category</span>
@@ -1135,7 +1135,7 @@
                         <div class="borrower-rates-container">
                             <div class="rate-column">
                                 <span class="rate-label">Balance Category</span>
-                                <span class="rate-value">Interest Owning</span>
+                                <span class="rate-value">INTEREST OWING</span>
                             </div>
                             <div class="rate-column">
                                 <span class="rate-label">Base Index</span>
@@ -1296,7 +1296,7 @@
             let tableHtml = "";
             data.forEach(item => {
                 const displayIndexName = baseIndex === 1 ? 'Fixed' : (item.baseIndex || (item.id === 3 || item.id === 6 ? 'Fixed' : 'Jibar'));
-                const displayBalanceCategory = displayIndexName === 'Fixed' ? 'PAYMENT IN KIND' : 'INTEREST OWNING';
+                const displayBalanceCategory = displayIndexName === 'Fixed' ? 'PAYMENT IN KIND' : 'INTEREST OWING';
                 tableHtml += `
                     <tr>
                         <td>${item.id}</td>

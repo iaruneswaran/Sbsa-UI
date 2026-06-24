@@ -227,6 +227,10 @@
                     
                     <div class="popup-rates-container" id="popupRatesContainer">
                         <div class="popup-rate-column">
+                            <span class="popup-rate-label">Balance Category</span>
+                            <span class="popup-rate-value">INTEREST OWNING</span>
+                        </div>
+                        <div class="popup-rate-column">
                             <span class="popup-rate-label">Base Index</span>
                             <span class="popup-rate-value">Jibar</span>
                         </div>
@@ -248,6 +252,33 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Empty State Message for no selected rate -->
+                <div class="popup-empty-state hidden" id="popupEmptyState">
+                    <div class="empty-state-content">
+                        <div class="empty-state-icon-wrapper">
+                            <svg class="empty-state-icon" viewBox="0 0 120 120" fill="none">
+                                <!-- Document Outline -->
+                                <path d="M54 25H78L90 37V85C90 87.2 88.2 89 86 89H54C51.8 89 50 87.2 50 85V29C50 26.8 51.8 25 54 25Z" stroke="#7b93a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M78 25V37H90" stroke="#7b93a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                
+                                <!-- Question mark bubble outline -->
+                                <path d="M 45 34 C 52.73 34 59 40.27 59 48 C 59 51.5 57.7 54.7 55.6 57.2 L 58.5 63.5 L 51.5 61.2 C 49.5 61.7 47.3 62 45 62 C 37.27 62 31 55.73 31 48 C 31 40.27 37.27 34 45 34 Z" fill="white" stroke="#7b93a4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                
+                                <!-- Question Mark Inside -->
+                                <path d="M 41.5 45 C 41.5 42.5 43 41.5 45 41.5 C 47 41.5 48.5 42.5 48.5 44.5 C 48.5 46.5 47 47.5 45.8 49 C 45.2 49.7 45 51 45 52" stroke="#7b93a4" stroke-width="2" stroke-linecap="round" />
+                                <circle cx="45" cy="56" r="1.5" fill="#7b93a4" />
+                                
+                                <!-- Rays/Sparks -->
+                                <path d="M 28 34 L 18 26" stroke="#7b93a4" stroke-width="2" stroke-linecap="round" />
+                                <path d="M 23 44 L 12 44" stroke="#7b93a4" stroke-width="2" stroke-linecap="round" />
+                                <path d="M 27 54 L 18 61" stroke="#7b93a4" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3 class="empty-state-title">No Data Found</h3>
+                        <p class="empty-state-text">Sufficient data is required to show the result</p>
+                    </div>
+                </div>
 
                 <!-- History Table Section -->
                 <section class="popup-history-section">
@@ -457,6 +488,7 @@
                                 <tr>
                                     <th class="h-col-hash">#</th>
                                     <th class="h-col-date">Effective Date</th>
+                                    <th class="h-col-rate h-col-balance-category">Balance Category</th>
                                     <th class="h-col-rate h-col-base-index">Base Index</th>
                                     <th class="h-col-rate">Base Rate</th>
                                     <th class="h-col-rate">Stat/Bank Cost/CAS</th>
@@ -468,6 +500,7 @@
                                 <tr>
                                     <td>1</td>
                                     <td>07 May 2025</td>
+                                    <td>INTEREST OWNING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>7.10 %</td>
                                     <td>1.10 %</td>
@@ -477,6 +510,7 @@
                                 <tr>
                                     <td>2</td>
                                     <td>01 May 2025</td>
+                                    <td>INTEREST OWNING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>7.00 %</td>
                                     <td>1.00 %</td>
@@ -486,6 +520,7 @@
                                 <tr>
                                     <td>3</td>
                                     <td>01 Apr 2025</td>
+                                    <td>PAYMENT IN KIND</td>
                                     <td class="col-base-index-val">Fixed</td>
                                     <td>6.85 %</td>
                                     <td>1.00 %</td>
@@ -495,6 +530,7 @@
                                 <tr>
                                     <td>4</td>
                                     <td>01 Mar 2025</td>
+                                    <td>INTEREST OWNING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>6.65 %</td>
                                     <td>1.00 %</td>
@@ -504,6 +540,7 @@
                                 <tr>
                                     <td>5</td>
                                     <td>01 Feb 2025</td>
+                                    <td>INTEREST OWNING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>6.50 %</td>
                                     <td>1.00 %</td>
@@ -513,6 +550,7 @@
                                 <tr>
                                     <td>6</td>
                                     <td>01 Jan 2025</td>
+                                    <td>PAYMENT IN KIND</td>
                                     <td class="col-base-index-val">Fixed</td>
                                     <td>6.30 %</td>
                                     <td>1.00 %</td>
@@ -522,6 +560,7 @@
                                 <tr>
                                     <td>7</td>
                                     <td>01 Dec 2024</td>
+                                    <td>INTEREST OWNING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>6.10 %</td>
                                     <td>1.00 %</td>
@@ -531,6 +570,7 @@
                                 <tr>
                                     <td>8</td>
                                     <td>01 Nov 2024</td>
+                                    <td>INTEREST OWNING</td>
                                     <td class="col-base-index-val">Jibar</td>
                                     <td>5.95 %</td>
                                     <td>1.00 %</td>
@@ -611,6 +651,10 @@
                     <div class="borrower-rates-row">
                         <div class="borrower-rates-container">
                             <div class="rate-column">
+                                <span class="rate-label">Balance Category</span>
+                                <span class="rate-value">INTEREST OWNING</span>
+                            </div>
+                            <div class="rate-column">
                                 <span class="rate-label">Base Index</span>
                                 <span class="rate-value">Jibar</span>
                             </div>
@@ -631,7 +675,7 @@
                                 <span class="rate-value rate-amber">11.96%</span>
                             </div>
                             <div class="rate-column rate-action-column">
-                                <a href="#" class="popup-select-rate-link">Select Rate</a>
+                                <a href="#" class="popup-select-rate-link">View History</a>
                             </div>
                         </div>
                     </div>
@@ -640,8 +684,12 @@
                     <div class="borrower-rates-row">
                         <div class="borrower-rates-container">
                             <div class="rate-column">
+                                <span class="rate-label">Balance Category</span>
+                                <span class="rate-value">PAYMENT IN KIND</span>
+                            </div>
+                            <div class="rate-column">
                                 <span class="rate-label">Base Index</span>
-                                <span class="rate-value">Jibar</span>
+                                <span class="rate-value">Fixed</span>
                             </div>
                             <div class="rate-column">
                                 <span class="rate-label">Base Rate</span>
@@ -660,65 +708,7 @@
                                 <span class="rate-value rate-amber">12.10%</span>
                             </div>
                             <div class="rate-column rate-action-column">
-                                <a href="#" class="popup-select-rate-link">Select Rate</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Active Rate Row 3 -->
-                    <div class="borrower-rates-row">
-                        <div class="borrower-rates-container">
-                            <div class="rate-column">
-                                <span class="rate-label">Base Index</span>
-                                <span class="rate-value">Fixed</span>
-                            </div>
-                            <div class="rate-column">
-                                <span class="rate-label">Base Rate</span>
-                                <span class="rate-value rate-blue">7.50%</span>
-                            </div>
-                            <div class="rate-column">
-                                <span class="rate-label">Stat/Bank Cost/CAS</span>
-                                <span class="rate-value rate-green">0.15%</span>
-                            </div>
-                            <div class="rate-column">
-                                <span class="rate-label">Spread Rate</span>
-                                <span class="rate-value rate-red">4.2%</span>
-                            </div>
-                            <div class="rate-column">
-                                <span class="rate-label">All in Rate</span>
-                                <span class="rate-value rate-amber">11.85%</span>
-                            </div>
-                            <div class="rate-column rate-action-column">
-                                <a href="#" class="popup-select-rate-link">Select Rate</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Active Rate Row 4 -->
-                    <div class="borrower-rates-row">
-                        <div class="borrower-rates-container">
-                            <div class="rate-column">
-                                <span class="rate-label">Base Index</span>
-                                <span class="rate-value">Jibar</span>
-                            </div>
-                            <div class="rate-column">
-                                <span class="rate-label">Base Rate</span>
-                                <span class="rate-value rate-blue">8.00%</span>
-                            </div>
-                            <div class="rate-column">
-                                <span class="rate-label">Stat/Bank Cost/CAS</span>
-                                <span class="rate-value rate-green">0.30%</span>
-                            </div>
-                            <div class="rate-column">
-                                <span class="rate-label">Spread Rate</span>
-                                <span class="rate-value rate-red">3.8%</span>
-                            </div>
-                            <div class="rate-column">
-                                <span class="rate-label">All in Rate</span>
-                                <span class="rate-value rate-amber">12.10%</span>
-                            </div>
-                            <div class="rate-column rate-action-column">
-                                <a href="#" class="popup-select-rate-link">Select Rate</a>
+                                <a href="#" class="popup-select-rate-link">View History</a>
                             </div>
                         </div>
                     </div>
@@ -726,42 +716,41 @@
             `;
             popupRatesContainer.innerHTML = scrollableRatesHtml;
             
-            // Set up click handlers for select rate
-            const selectRateLinks = popupRatesContainer.querySelectorAll('.popup-select-rate-link');
+            // Get empty state and history section elements
+            const emptyState = document.getElementById('popupEmptyState');
+            const historySection = document.querySelector('.popup-history-section');
+
+            // Initially hide history table section and show empty state message
+            if (emptyState) emptyState.classList.remove('hidden');
+            if (historySection) historySection.classList.add('hidden');
+
             const rateRows = popupRatesContainer.querySelectorAll('.borrower-rates-row');
 
-            // Select the first rate row by default
-            if (rateRows.length > 0) {
-                rateRows[0].classList.add('selected-rate-row');
-                const firstLink = rateRows[0].querySelector('.popup-select-rate-link');
-                if (firstLink) {
-                    firstLink.classList.add('is-selected');
-                    firstLink.innerHTML = 'Selected';
-                }
-                updateHistoryTable(0);
-            }
-
-            selectRateLinks.forEach((link, index) => {
-                link.addEventListener('click', (e) => {
+            rateRows.forEach((row, index) => {
+                row.addEventListener('click', (e) => {
                     e.preventDefault();
                     
                     // Reset all rows and links
-                    rateRows.forEach(row => {
-                        row.classList.remove('selected-rate-row');
-                        const rowLink = row.querySelector('.popup-select-rate-link');
+                    rateRows.forEach(r => {
+                        r.classList.remove('selected-rate-row');
+                        const rowLink = r.querySelector('.popup-select-rate-link');
                         if (rowLink) {
                             rowLink.classList.remove('is-selected');
-                            rowLink.innerHTML = 'Select Rate';
+                            rowLink.innerHTML = 'View History';
                         }
                     });
 
                     // Set selected row and link
-                    const selectedRow = rateRows[index];
-                    if (selectedRow) {
-                        selectedRow.classList.add('selected-rate-row');
+                    row.classList.add('selected-rate-row');
+                    const link = row.querySelector('.popup-select-rate-link');
+                    if (link) {
+                        link.classList.add('is-selected');
+                        link.innerHTML = 'View History';
                     }
-                    link.classList.add('is-selected');
-                    link.innerHTML = 'Selected';
+
+                    // Hide empty state and show history table section
+                    if (emptyState) emptyState.classList.add('hidden');
+                    if (historySection) historySection.classList.remove('hidden');
 
                     // Update bottom history table dynamically
                     updateHistoryTable(index);
@@ -823,11 +812,13 @@
 
             let tableHtml = "";
             data.forEach(item => {
-                const displayIndexName = item.baseIndex || (item.id === 3 || item.id === 6 ? 'Fixed' : 'Jibar');
+                const displayIndexName = baseIndex === 1 ? 'Fixed' : (item.baseIndex || (item.id === 3 || item.id === 6 ? 'Fixed' : 'Jibar'));
+                const displayBalanceCategory = displayIndexName === 'Fixed' ? 'PAYMENT IN KIND' : 'INTEREST OWNING';
                 tableHtml += `
                     <tr>
                         <td>${item.id}</td>
                         <td>${item.date}</td>
+                        <td>${displayBalanceCategory}</td>
                         <td class="col-base-index-val">${displayIndexName}</td>
                         <td>${item.base}</td>
                         <td>${item.reserve}</td>
